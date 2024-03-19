@@ -51,8 +51,8 @@ const BillingAddress = ({
   return (
     <>
       <div className="grid grid-cols-2 gap-4">
-        <Input
-          label="First name"
+      <Input
+          label="Nome"
           name="billing_address.first_name"
           autoComplete="given-name"
           value={formData["billing_address.first_name"]}
@@ -60,7 +60,7 @@ const BillingAddress = ({
           required
         />
         <Input
-          label="Last name"
+          label="Cognome"
           name="billing_address.last_name"
           autoComplete="family-name"
           value={formData["billing_address.last_name"]}
@@ -68,7 +68,7 @@ const BillingAddress = ({
           required
         />
         <Input
-          label="Address"
+          label="Indirizzo"
           name="billing_address.address_1"
           autoComplete="address-line1"
           value={formData["billing_address.address_1"]}
@@ -76,14 +76,15 @@ const BillingAddress = ({
           required
         />
         <Input
-          label="Company"
-          name="billing_address.company"
-          value={formData["billing_address.company"]}
+          label="Città"
+          name="billing_address.city"
+          autoComplete="address-level2"
+          value={formData["billing_address.city"]}
           onChange={handleChange}
-          autoComplete="organization"
+          required
         />
         <Input
-          label="Postal code"
+          label="CAP"
           name="billing_address.postal_code"
           autoComplete="postal-code"
           value={formData["billing_address.postal_code"]}
@@ -91,10 +92,10 @@ const BillingAddress = ({
           required
         />
         <Input
-          label="City"
-          name="billing_address.city"
-          autoComplete="address-level2"
-          value={formData["billing_address.city"]}
+          label="Provincia"
+          name="billing_address.province"
+          autoComplete="address-level1"
+          value={formData["billing_address.province"]}
           onChange={handleChange}
           required
         />
@@ -105,20 +106,6 @@ const BillingAddress = ({
           value={formData["billing_address.country_code"]}
           onChange={handleChange}
           required
-        />
-        <Input
-          label="State / Province"
-          name="billing_address.province"
-          autoComplete="address-level1"
-          value={formData["billing_address.province"]}
-          onChange={handleChange}
-        />
-        <Input
-          label="Phone"
-          name="billing_address.phone"
-          autoComplete="tel"
-          value={formData["billing_address.phone"]}
-          onChange={handleChange}
         />
       </div>
     </>

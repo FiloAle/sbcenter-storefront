@@ -41,7 +41,7 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
         })}`
 
       default:
-        return "Free shipping"
+        return "Spedizione gratuita"
     }
   }, [discounts, region])
 
@@ -60,14 +60,14 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
       <div className="txt-medium">
         {gift_cards.length > 0 && (
           <div className="flex flex-col mb-4">
-            <Heading className="txt-medium">Gift card(s) applied:</Heading>
+            <Heading className="txt-medium">Gift card applicata:</Heading>
             {gift_cards?.map((gc) => (
               <div
                 className="flex items-center justify-between txt-small-plus"
                 key={gc.id}
               >
                 <Text className="flex gap-x-1 items-baseline">
-                  <span>Code: </span>
+                  <span>Codice: </span>
                   <span className="truncate">{gc.code}</span>
                 </Text>
                 <Text className="font-semibold">
@@ -82,7 +82,7 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
                   onClick={() => removeGiftCardCode(gc.code)}
                 >
                   <Trash size={14} />
-                  <span className="sr-only">Remove gift card from order</span>
+                  <span className="sr-only">Rimuovi la gift card</span>
                 </button>
               </div>
             ))}
@@ -92,7 +92,7 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
         {appliedDiscount ? (
           <div className="w-full flex items-center">
             <div className="flex flex-col w-full">
-              <Heading className="txt-medium">Discount applied:</Heading>
+              <Heading className="txt-medium">Sconto applicato:</Heading>
               <div className="flex items-center justify-between w-full max-w-full">
                 <Text className="flex gap-x-1 items-baseline txt-small-plus w-4/5 pr-1">
                   <span>Code:</span>
@@ -105,7 +105,7 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
                 >
                   <Trash size={14} />
                   <span className="sr-only">
-                    Remove discount code from order
+                    Rimuovi il codice sconto
                   </span>
                 </button>
               </div>
@@ -119,9 +119,9 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
                 type="button"
                 className="txt-medium text-ui-fg-interactive hover:text-ui-fg-interactive-hover"
               >
-                Add gift card or discount code
+                Aggiungi gift card o codice sconto
               </button>
-              <Tooltip content="You can add multiple gift cards, but only one discount code.">
+              <Tooltip content="Puoi aggiungere più gift card o un solo codice sconto.">
                 <InformationCircleSolid color="var(--fg-muted)" />
               </Tooltip>
             </Label>
@@ -129,12 +129,12 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
               <>
                 <div className="flex w-full gap-x-2 items-center">
                   <Input
-                    label="Please enter code"
+                    label="Codice sconto"
                     name="code"
                     type="text"
                     autoFocus={false}
                   />
-                  <SubmitButton variant="secondary">Apply</SubmitButton>
+                  <SubmitButton variant="secondary">Applica</SubmitButton>
                 </div>
                 <ErrorMessage error={message} />
               </>
