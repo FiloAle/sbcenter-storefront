@@ -101,35 +101,35 @@ const EditAddress: React.FC<EditAddressProps> = ({
             onClick={open}
           >
             <Edit />
-            Edit
+            Modifica
           </button>
           <button
             className="text-small-regular text-ui-fg-base flex items-center gap-x-2"
             onClick={removeAddress}
           >
             {removing ? <Spinner /> : <Trash />}
-            Remove
+            Rimuovi
           </button>
         </div>
       </div>
 
       <Modal isOpen={state} close={close}>
         <Modal.Title>
-          <Heading className="mb-2">Edit address</Heading>
+          <Heading className="mb-2">Modifica indirizzo</Heading>
         </Modal.Title>
         <form action={formAction}>
           <Modal.Body>
             <div className="grid grid-cols-1 gap-y-2">
               <div className="grid grid-cols-2 gap-x-2">
                 <Input
-                  label="First name"
+                  label="Nome"
                   name="first_name"
                   required
                   autoComplete="given-name"
                   defaultValue={address.first_name || undefined}
                 />
                 <Input
-                  label="Last name"
+                  label="Cognome"
                   name="last_name"
                   required
                   autoComplete="family-name"
@@ -137,34 +137,28 @@ const EditAddress: React.FC<EditAddressProps> = ({
                 />
               </div>
               <Input
-                label="Company"
-                name="company"
-                autoComplete="organization"
-                defaultValue={address.company || undefined}
-              />
-              <Input
-                label="Address"
+                label="Indirizzo"
                 name="address_1"
                 required
                 autoComplete="address-line1"
                 defaultValue={address.address_1 || undefined}
               />
               <Input
-                label="Apartment, suite, etc."
+                label="Appartamento, interno, ecc."
                 name="address_2"
                 autoComplete="address-line2"
                 defaultValue={address.address_2 || undefined}
               />
               <div className="grid grid-cols-[144px_1fr] gap-x-2">
                 <Input
-                  label="Postal code"
+                  label="CAP"
                   name="postal_code"
                   required
                   autoComplete="postal-code"
                   defaultValue={address.postal_code || undefined}
                 />
                 <Input
-                  label="City"
+                  label="Città"
                   name="city"
                   required
                   autoComplete="locality"
@@ -172,20 +166,14 @@ const EditAddress: React.FC<EditAddressProps> = ({
                 />
               </div>
               <Input
-                label="Province / State"
+                label="Provincia"
                 name="province"
+                required
                 autoComplete="address-level1"
                 defaultValue={address.province || undefined}
               />
-              <CountrySelect
-                name="country_code"
-                region={region}
-                required
-                autoComplete="country"
-                defaultValue={address.country_code || undefined}
-              />
               <Input
-                label="Phone"
+                label="Telefono"
                 name="phone"
                 autoComplete="phone"
                 defaultValue={address.phone || undefined}
@@ -205,9 +193,9 @@ const EditAddress: React.FC<EditAddressProps> = ({
                 onClick={close}
                 className="h-10"
               >
-                Cancel
+                Annulla
               </Button>
-              <SubmitButton>Save</SubmitButton>
+              <SubmitButton>Salva</SubmitButton>
             </div>
           </Modal.Footer>
         </form>

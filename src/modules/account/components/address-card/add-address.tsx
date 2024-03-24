@@ -46,73 +46,63 @@ const AddAddress = ({ region }: { region: Region }) => {
         className="border border-ui-border-base rounded-rounded p-5 min-h-[220px] h-full w-full flex flex-col justify-between"
         onClick={open}
       >
-        <span className="text-base-semi">New address</span>
+        <span className="text-base-semi">Nuovo indirizzo</span>
         <Plus />
       </button>
 
       <Modal isOpen={state} close={close}>
         <Modal.Title>
-          <Heading className="mb-2">Add address</Heading>
+          <Heading className="mb-2">Aggiungi indirizzo</Heading>
         </Modal.Title>
         <form action={formAction}>
           <Modal.Body>
             <div className="flex flex-col gap-y-2">
               <div className="grid grid-cols-2 gap-x-2">
                 <Input
-                  label="First name"
+                  label="Nome"
                   name="first_name"
                   required
                   autoComplete="given-name"
                 />
                 <Input
-                  label="Last name"
+                  label="Cognome"
                   name="last_name"
                   required
                   autoComplete="family-name"
                 />
               </div>
               <Input
-                label="Company"
-                name="company"
-                autoComplete="organization"
-              />
-              <Input
-                label="Address"
+                label="Indirizzo"
                 name="address_1"
                 required
                 autoComplete="address-line1"
               />
               <Input
-                label="Apartment, suite, etc."
+                label="Appartamento, interno, ecc."
                 name="address_2"
                 autoComplete="address-line2"
               />
               <div className="grid grid-cols-[144px_1fr] gap-x-2">
                 <Input
-                  label="Postal code"
+                  label="CAP"
                   name="postal_code"
                   required
                   autoComplete="postal-code"
                 />
                 <Input
-                  label="City"
+                  label="Città"
                   name="city"
                   required
                   autoComplete="locality"
                 />
               </div>
               <Input
-                label="Province / State"
+                label="Provincia"
                 name="province"
+                required
                 autoComplete="address-level1"
               />
-              <CountrySelect
-                region={region}
-                name="country_code"
-                required
-                autoComplete="country"
-              />
-              <Input label="Phone" name="phone" autoComplete="phone" />
+              <Input label="Telefono" name="phone" autoComplete="phone" />
             </div>
             {formState.error && (
               <div className="text-rose-500 text-small-regular py-2">
@@ -128,9 +118,9 @@ const AddAddress = ({ region }: { region: Region }) => {
                 onClick={close}
                 className="h-10"
               >
-                Cancel
+                Annulla
               </Button>
-              <SubmitButton>Save</SubmitButton>
+              <SubmitButton>Salva</SubmitButton>
             </div>
           </Modal.Footer>
         </form>

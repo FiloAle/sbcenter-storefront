@@ -21,7 +21,7 @@ const AccountInfo = ({
   isSuccess,
   isError,
   clearState,
-  errorMessage = "An error occurred, please try again",
+  errorMessage = "Si è verificato un errora, riprova",
   children,
 }: AccountInfoProps) => {
   const { state, close, toggle } = useToggleState()
@@ -44,9 +44,9 @@ const AccountInfo = ({
       <div className="flex items-end justify-between">
         <div className="flex flex-col">
           <span className="uppercase text-ui-fg-base">{label}</span>
-          <div className="flex items-center flex-1 basis-0 justify-end gap-x-4">
+          <div className="flex items-center font-semibold flex-1 basis-0 justify-end gap-x-4">
             {typeof currentInfo === "string" ? (
-              <span className="font-semibold">{currentInfo}</span>
+              <span>{currentInfo}</span>
             ) : (
               currentInfo
             )}
@@ -59,7 +59,7 @@ const AccountInfo = ({
             onClick={handleToggle}
             type={state ? "reset" : "button"}
           >
-            {state ? "Cancel" : "Edit"}
+            {state ? "Annulla" : "Modifica"}
           </Button>
         </div>
       </div>
@@ -77,7 +77,7 @@ const AccountInfo = ({
           )}
         >
           <Badge className="p-2 my-4" color="green">
-            <span>{label} updated succesfully</span>
+            <span>Dati aggiornati correttamente</span>
           </Badge>
         </Disclosure.Panel>
       </Disclosure>
@@ -119,7 +119,7 @@ const AccountInfo = ({
                 className="w-full small:max-w-[140px]"
                 type="submit"
               >
-                Save changes
+                Salva
               </Button>
             </div>
           </div>

@@ -30,10 +30,12 @@ const CheckoutSummary = async () => {
         >
           Carrello
         </Heading>
-        <Divider className="my-6" />
-        <CartTotals data={cart} />
-        <ItemsPreviewTemplate region={cart?.region} items={cart?.items} />
-        <div className="my-6">
+        <Divider />
+        <ItemsPreviewTemplate region={cart?.region} items={cart?.items}/>
+        <div className="mt-4">
+          <CartTotals data={cart}/>
+        </div>
+        <div className="mt-4">
           <DiscountCode cart={cart} />
         </div>
       </div>

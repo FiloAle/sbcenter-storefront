@@ -4,7 +4,6 @@ import { Customer, Region } from "@medusajs/medusa"
 import React, { useEffect, useMemo } from "react"
 
 import Input from "@modules/common/components/input"
-import NativeSelect from "@modules/common/components/native-select"
 
 import AccountInfo from "../account-info"
 import { useFormState } from "react-dom"
@@ -49,7 +48,7 @@ const ProfileBillingAddress: React.FC<MyInformationProps> = ({
 
   const currentInfo = useMemo(() => {
     if (!customer.billing_address) {
-      return "No billing address"
+      return "Nessun indirizzo di fatturazione salvato"
     }
 
     const country =
@@ -72,9 +71,9 @@ const ProfileBillingAddress: React.FC<MyInformationProps> = ({
         </span>
         <span>
           {customer.billing_address.postal_code},{" "}
-          {customer.billing_address.city}
+          {customer.billing_address.city}{" "}
+          ({customer.billing_address.province})
         </span>
-        <span>{country}</span>
       </div>
     )
   }, [customer, regionOptions])
@@ -82,7 +81,7 @@ const ProfileBillingAddress: React.FC<MyInformationProps> = ({
   return (
     <form action={formAction} onReset={() => clearState()} className="w-full">
       <AccountInfo
-        label="Billing address"
+        label="Indirizzo di fatturazione"
         currentInfo={currentInfo}
         isSuccess={successState}
         isError={!!state.error}
@@ -91,67 +90,49 @@ const ProfileBillingAddress: React.FC<MyInformationProps> = ({
         <div className="grid grid-cols-1 gap-y-2">
           <div className="grid grid-cols-2 gap-x-2">
             <Input
-              label="First name"
+              label="Nome"
               name="billing_address.first_name"
               defaultValue={customer.billing_address?.first_name || undefined}
               required
             />
             <Input
-              label="Last name"
+              label="Cognome"
               name="billing_address.last_name"
               defaultValue={customer.billing_address?.last_name || undefined}
               required
             />
           </div>
           <Input
-            label="Company"
-            name="billing_address.company"
-            defaultValue={customer.billing_address?.company || undefined}
-          />
-          <Input
-            label="Address"
+            label="Indirizzo"
             name="billing_address.address_1"
             defaultValue={customer.billing_address?.address_1 || undefined}
             required
           />
           <Input
-            label="Apartment, suite, etc."
+            label="Appartamento, interno, ecc."
             name="billing_address.address_2"
             defaultValue={customer.billing_address?.address_2 || undefined}
           />
           <div className="grid grid-cols-[144px_1fr] gap-x-2">
             <Input
-              label="Postal code"
+              label="CAP"
               name="billing_address.postal_code"
               defaultValue={customer.billing_address?.postal_code || undefined}
               required
             />
             <Input
-              label="City"
+              label="Città"
               name="billing_address.city"
               defaultValue={customer.billing_address?.city || undefined}
               required
             />
           </div>
           <Input
-            label="Province"
+            label="Provincia"
             name="billing_address.province"
             defaultValue={customer.billing_address?.province || undefined}
-          />
-          <NativeSelect
-            name="billing_address.country_code"
-            defaultValue={customer.billing_address?.country_code || undefined}
             required
-          >
-            <option value="">-</option>
-            {regionOptions.map((option, i) => {
-              return (
-                <option key={i} value={option.value}>
-                  {option.label}
-                </option>
-              )
-            })}
-          </NativeSelect>
+          />
         </div>
       </AccountInfo>
     </form>

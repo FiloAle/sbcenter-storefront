@@ -12,6 +12,7 @@ import LineItemOptions from "@modules/common/components/line-item-options"
 import LineItemPrice from "@modules/common/components/line-item-price"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import Thumbnail from "@modules/products/components/thumbnail"
+import { PillButton } from "@modules/common/components/pill-button"
 
 const CartDropdown = ({
   cart: cartState,
@@ -165,24 +166,21 @@ const CartDropdown = ({
                     </span>
                   </div>
                   <LocalizedClientLink href="/cart" passHref>
-                    <Button className="w-full" size="large">
+                    <PillButton variant="secondary_dark" size="lg">
                       Vai al carrello
-                    </Button>
+                    </PillButton>
                   </LocalizedClientLink>
                 </div>
               </>
             ) : (
               <div>
-                <div className="flex py-16 flex-col gap-y-4 items-center justify-center">
-                  <div className="bg-gray-900 text-small-regular flex items-center justify-center w-6 h-6 rounded-full text-white">
-                    <span>0</span>
-                  </div>
+                <div className="flex py-16 flex-col items-center justify-center gap-y-8">
                   <span>Il tuo carrello è vuoto.</span>
                   <div>
                     <LocalizedClientLink href="/store">
                       <>
                         <span className="sr-only">Vai ai prodotti</span>
-                        <Button onClick={close} className="rounded-full">Esplora i prodotti</Button>
+                        <PillButton onClick={close} variant="secondary_dark">Esplora i prodotti</PillButton>
                       </>
                     </LocalizedClientLink>
                   </div>

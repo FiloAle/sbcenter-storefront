@@ -87,18 +87,18 @@ export async function addToCart({
   const cart = await getOrSetCart(countryCode).then((cart) => cart)
 
   if (!cart) {
-    return "Missing cart ID"
+    return "ID carrello mancante"
   }
 
   if (!variantId) {
-    return "Missing product variant ID"
+    return "ID variante prodotto mancante"
   }
 
   try {
     await addItem({ cartId: cart.id, variantId, quantity })
     revalidateTag("cart")
   } catch (e) {
-    return "Error adding item to cart"
+    return "Errore durante l'aggiunta del prodotto al carrello"
   }
 }
 
@@ -112,15 +112,15 @@ export async function updateLineItem({
   const cartId = cookies().get("_medusa_cart_id")?.value
 
   if (!cartId) {
-    return "Missing cart ID"
+    return "ID carrello mancante"
   }
 
   if (!lineId) {
-    return "Missing lineItem ID"
+    return "ID lineItem mancante"
   }
 
   if (!cartId) {
-    return "Missing cart ID"
+    return "ID carrello mancante"
   }
 
   try {
@@ -135,22 +135,22 @@ export async function deleteLineItem(lineId: string) {
   const cartId = cookies().get("_medusa_cart_id")?.value
 
   if (!cartId) {
-    return "Missing cart ID"
+    return "ID carrello mancante"
   }
 
   if (!lineId) {
-    return "Missing lineItem ID"
+    return "ID lineItem mancante"
   }
 
   if (!cartId) {
-    return "Missing cart ID"
+    return "ID carrello mancante"
   }
 
   try {
     await removeItem({ cartId, lineId })
     revalidateTag("cart")
   } catch (e) {
-    return "Error deleting line item"
+    return "Errore durante la rimozione dell'elemento"
   }
 }
 

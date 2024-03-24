@@ -11,9 +11,9 @@ import LocalizedClientLink from "@modules/common/components/localized-client-lin
 const SideMenuItems = {
   Home: "/",
   Store: "/store",
-  Search: "/search",
+  Cerca: "/search",
   Account: "/account",
-  Cart: "/cart",
+  Carrello: "/cart",
 }
 
 const SideMenu = () => {
@@ -71,8 +71,8 @@ const SideMenu = () => {
                       >
                       </div>
                       <Text className="flex justify-between txt-compact-small">
-                        © {new Date().getFullYear()} Medusa Store. All rights
-                        reserved.
+                        © {new Date().getFullYear()} SB Center. Tutti i diritti
+                        riservati.
                       </Text>
                     </div>
                   </div>

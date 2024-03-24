@@ -1,7 +1,7 @@
 "use client"
 
 import { Customer } from "@medusajs/medusa"
-import React, { useEffect } from "react"
+import React, { useEffect, useMemo } from "react"
 import { useFormState } from "react-dom"
 
 import Input from "@modules/common/components/input"
@@ -29,11 +29,19 @@ const ProfileEmail: React.FC<MyInformationProps> = ({ customer }) => {
     setSuccessState(state.success)
   }, [state])
 
+  const currentInfo = useMemo(() => {
+    if (!customer.phone) {
+      return "Nessun numero di telefono salvato"
+    }
+
+    return customer.phone
+  }, [customer])
+
   return (
-    <form action={formAction} className="w-full">
+    <form action={formAction} onReset={() => clearState()} className="w-full">
       <AccountInfo
-        label="Phone"
-        currentInfo={`${customer.phone}`}
+        label="Telefono"
+        currentInfo={currentInfo}
         isSuccess={successState}
         isError={!!state.error}
         errorMessage={state.error}
@@ -41,11 +49,10 @@ const ProfileEmail: React.FC<MyInformationProps> = ({ customer }) => {
       >
         <div className="grid grid-cols-1 gap-y-2">
           <Input
-            label="Phone"
+            label="Telefono"
             name="phone"
             type="phone"
             autoComplete="phone"
-            required
             defaultValue={customer.phone}
           />
         </div>

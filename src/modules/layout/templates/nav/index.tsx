@@ -25,7 +25,7 @@ export default async function Nav() {
             </LocalizedClientLink>
           </div>
 
-          <div className="flex items-center gap-x-6 h-full flex-1 basis-0 justify-end">
+          <div className="z-0 flex items-center gap-x-6 h-full flex-1 basis-0 justify-end">
             <div className="hidden small:flex items-center gap-x-6 h-full">
               {process.env.FEATURE_SEARCH_ENABLED && (
                 <LocalizedClientLink

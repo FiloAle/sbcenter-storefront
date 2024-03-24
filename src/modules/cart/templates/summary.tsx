@@ -18,9 +18,9 @@ const Summary = ({ cart }: SummaryProps) => {
       <Heading level="h2" className="text-[2rem] leading-[2.75rem]">
         Riepilogo
       </Heading>
-      <DiscountCode cart={cart} />
       <Divider />
       <CartTotals data={cart} />
+      <DiscountCode cart={cart} />
       <LocalizedClientLink href={"/checkout?step=" + cart.checkout_step}>
         <Button className="w-full h-10">Procedi all'acquisto</Button>
       </LocalizedClientLink>
