@@ -58,17 +58,9 @@ module.exports = {
       fontSize: {
         "3xl": "2rem",
       },
-      fontFamily: {
-        sans: [
-          "Inter",
-          "-apple-system",
-          "BlinkMacSystemFont",
-          "Segoe UI",
-          "Roboto",
-          "Helvetica Neue",
-          "Ubuntu",
-          "sans-serif",
-        ],
+      fontFamily: { 
+        sans: ['Poppins', 'sans-serif'],
+        serif: ['Playfair Display', 'serif']
       },
       keyframes: {
         ring: {

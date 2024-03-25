@@ -7,6 +7,7 @@ import Divider from "@modules/common/components/divider"
 import { CartWithCheckoutStep } from "types/global"
 import DiscountCode from "@modules/checkout/components/discount-code"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
+import { PillButton } from "@modules/common/components/pill-button"
 
 type SummaryProps = {
   cart: CartWithCheckoutStep
@@ -22,7 +23,7 @@ const Summary = ({ cart }: SummaryProps) => {
       <CartTotals data={cart} />
       <DiscountCode cart={cart} />
       <LocalizedClientLink href={"/checkout?step=" + cart.checkout_step}>
-        <Button className="w-full h-10">Procedi all'acquisto</Button>
+        <PillButton size="lg" variant="secondary_dark">Procedi all'acquisto</PillButton>
       </LocalizedClientLink>
     </div>
   )

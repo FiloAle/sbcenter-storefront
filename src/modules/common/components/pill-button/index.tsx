@@ -15,6 +15,8 @@ const buttonVariants = cva(
           "bg-white text-black hover:bg-slate-50 hover:shadow-lg dark:bg-black dark:text-white dark:hover:bg-slate-900",
         secondary_dark:
           "bg-black text-white hover:bg-slate-900 hover:shadow-lg dark:bg-white dark:text-black dark:hover:bg-slate-50",
+        secondary_border:
+          "bg-white border border-slate-300 text-black hover:bg-slate-50 hover:shadow-lg dark:bg-black dark:text-white dark:hover:bg-slate-900",
         },
       size: {
         default: "py-2 px-4",

@@ -60,14 +60,13 @@ const Item = ({ item, region, type = "full" }: ItemProps) => {
       </Table.Cell>
 
       <Table.Cell className="text-left">
-        <Text className="txt-medium-plus text-ui-fg-base">{item.title}</Text>
+        <Text className="text-md text-ui-fg-base">{item.title}</Text>
         <LineItemOptions variant={item.variant} />
       </Table.Cell>
 
       {type === "full" && (
         <Table.Cell>
           <div className="flex gap-2 items-center w-28">
-            <DeleteButton id={item.id} />
             <CartItemSelect
               value={item.quantity}
               onChange={(value) => changeQuantity(parseInt(value.target.value))}
@@ -89,6 +88,7 @@ const Item = ({ item, region, type = "full" }: ItemProps) => {
                 )
               )}
             </CartItemSelect>
+            <DeleteButton id={item.id} />
             {updating && <Spinner />}
           </div>
           <ErrorMessage error={error} />
@@ -109,7 +109,7 @@ const Item = ({ item, region, type = "full" }: ItemProps) => {
         >
           {type === "preview" && (
             <span className="flex gap-x-1 ">
-              <Text className="text-ui-fg-muted">{item.quantity}x </Text>
+              <Text className="text-ui-fg-muted">{item.quantity} x </Text>
               <LineItemUnitPrice item={item} region={region} style="tight" />
             </span>
           )}

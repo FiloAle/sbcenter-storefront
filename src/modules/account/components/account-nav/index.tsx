@@ -2,14 +2,10 @@
 
 import { Customer } from "@medusajs/medusa"
 import { clx } from "@medusajs/ui"
-import { ArrowRightOnRectangle } from "@medusajs/icons"
+import { ArrowRightOnRectangle, User, ChevronDown, MapPin, ReceiptPercent } from "@medusajs/icons"
 import { useParams, usePathname } from "next/navigation"
 
-import ChevronDown from "@modules/common/icons/chevron-down"
 import { signOut } from "@modules/account/actions"
-import User from "@modules/common/icons/user"
-import MapPin from "@modules/common/icons/map-pin"
-import Package from "@modules/common/icons/package"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 
 const AccountNav = ({
@@ -51,7 +47,7 @@ const AccountNav = ({
                   >
                     <>
                       <div className="flex items-center gap-x-2">
-                        <User size={20} />
+                        <User />
                         <span>Profilo</span>
                       </div>
                       <ChevronDown className="transform -rotate-90" />
@@ -65,7 +61,7 @@ const AccountNav = ({
                   >
                     <>
                       <div className="flex items-center gap-x-2">
-                        <MapPin size={20} />
+                        <MapPin />
                         <span>Indirizzi</span>
                       </div>
                       <ChevronDown className="transform -rotate-90" />
@@ -78,7 +74,7 @@ const AccountNav = ({
                     className="flex items-center justify-between py-4 border-b border-gray-200 px-8"
                   >
                     <div className="flex items-center gap-x-2">
-                      <Package size={20} />
+                      <ReceiptPercent />
                       <span>Ordini</span>
                     </div>
                     <ChevronDown className="transform -rotate-90" />
@@ -87,7 +83,7 @@ const AccountNav = ({
                 <li>
                   <button
                     type="button"
-                    className="flex items-center justify-between py-4 border-b border-gray-200 px-8 w-full"
+                    className="flex items-center justify-between py-4 border-b border-gray-200 px-8 w-full text-red-500 focus:text-red-700"
                     onClick={handleLogout}
                   >
                     <div className="flex items-center gap-x-2">
@@ -129,7 +125,7 @@ const AccountNav = ({
                   Ordini
                 </AccountNavLink>
               </li>
-              <li className="text-grey-700">
+              <li className="text-red-500 hover:text-red-700">
                 <button type="button" onClick={handleLogout}>
                   Esci
                 </button>

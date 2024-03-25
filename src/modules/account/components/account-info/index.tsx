@@ -55,7 +55,7 @@ const AccountInfo = ({
         <div>
           <Button
             variant="secondary"
-            className="w-[100px] min-h-[25px] py-1"
+            className="w-[100px] min-h-[25px] rounded-full bg-white border border-slate-300 text-black hover:bg-slate-50 shadow-md hover:shadow-lg"
             onClick={handleToggle}
             type={state ? "reset" : "button"}
           >
@@ -116,7 +116,7 @@ const AccountInfo = ({
             <div className="flex items-center justify-end mt-2">
               <Button
                 isLoading={pending}
-                className="w-full small:max-w-[140px]"
+                className="w-[100px] min-h-[25px] border-none rounded-full bg-green-600 text-white shadow-md hover:bg-green-700 hover:shadow-lg"
                 type="submit"
               >
                 Salva

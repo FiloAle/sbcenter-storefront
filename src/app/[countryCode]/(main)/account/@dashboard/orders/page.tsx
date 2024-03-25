@@ -5,8 +5,8 @@ import { listCustomerOrders } from "@lib/data"
 import { notFound } from "next/navigation"
 
 export const metadata: Metadata = {
-  title: "Orders",
-  description: "Overview of your previous orders.",
+  title: "SB Center | Ordini",
+  description: "Panoramica dei tuoi ordini.",
 }
 
 export default async function Orders() {

@@ -2,7 +2,7 @@
 
 import { Popover, Transition } from "@headlessui/react"
 import { Cart } from "@medusajs/medusa"
-import { Button } from "@medusajs/ui"
+import { ShoppingBag } from "@medusajs/icons"
 import { useParams, usePathname } from "next/navigation"
 import { Fragment, useEffect, useRef, useState } from "react"
 
@@ -73,16 +73,16 @@ const CartDropdown = ({
 
   return (
     <div
-      className="h-full z-50"
+      className="h-full z-50 font-sans"
       onMouseEnter={openAndCancel}
       onMouseLeave={close}
     >
       <Popover className="relative h-full">
-        <Popover.Button className="h-full">
+        <Popover.Button className="h-full text-black transition-all hover:text-slate-600">
           <LocalizedClientLink
-            className="hover:text-ui-fg-base"
+            className="flex flex-row"
             href="/cart"
-          >{`Carrello (${totalItems})`}</LocalizedClientLink>
+          ><ShoppingBag/> <div className="mt-px ms-px pt-0.5 h-5 w-5 bg-yellow-500 rounded-full text-black font-semibold text-center items-center justify-center">{`${totalItems}`}</div></LocalizedClientLink>
         </Popover.Button>
         <Transition
           show={cartDropdownOpen}
@@ -96,14 +96,11 @@ const CartDropdown = ({
         >
           <Popover.Panel
             static
-            className="hidden small:block absolute top-[calc(100%+28px)] right-0 bg-white border border-gray-200 w-[420px] text-ui-fg-base rounded-xl"
+            className="hidden small:block absolute top-[calc(100%+28px)] right-0 bg-white border border-gray-200 w-[420px] text-black rounded-xl shadow-md"
           >
-            <div className="p-4 flex items-center justify-center">
-              <h3 className="text-large-semi">Carrello</h3>
-            </div>
             {cartState && cartState.items?.length ? (
               <>
-                <div className="overflow-y-scroll max-h-[402px] px-4 grid grid-cols-1 gap-y-8 no-scrollbar p-px">
+                <div className="overflow-y-scroll max-h-[402px] pt-4 px-4 grid grid-cols-1 gap-y-8 no-scrollbar p-px">
                   {cartState.items
                     .sort((a, b) => {
                       return a.created_at > b.created_at ? -1 : 1
@@ -131,7 +128,7 @@ const CartDropdown = ({
                                   </LocalizedClientLink>
                                 </h3>
                                 
-                                <span className="txt-medium text-ui-fg-subtle">
+                                <span className="text-sm text-slate-600">
                                   Quantità: {item.quantity} (<LineItemOptions variant={item.variant} />)
                                 </span>
                               </div>
@@ -167,7 +164,7 @@ const CartDropdown = ({
                   </div>
                   <LocalizedClientLink href="/cart" passHref>
                     <PillButton variant="secondary_dark" size="lg">
-                      Vai al carrello
+                      Vai al checkout
                     </PillButton>
                   </LocalizedClientLink>
                 </div>

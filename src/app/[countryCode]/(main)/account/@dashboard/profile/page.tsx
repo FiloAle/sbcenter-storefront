@@ -9,7 +9,7 @@ import { getCustomer, listRegions } from "@lib/data"
 import { notFound } from "next/navigation"
 
 export const metadata: Metadata = {
-  title: "Profilo",
+  title: "SB Center | Account",
   description: "Visualizza e modifica il tuo account SB Center.",
 }
 

@@ -26,14 +26,14 @@ export default function OrderCompletedTemplate({
         <div className="flex flex-col gap-4 max-w-4xl h-full bg-white w-full py-10">
           <Heading
             level="h1"
-            className="flex flex-col gap-y-3 text-ui-fg-base text-3xl mb-4"
+            className="flex flex-col gap-y-3 text-ui-fg-base mb-4"
           >
-            <span>Thank you!</span>
-            <span>Your order was placed successfully.</span>
+            <span className="text-3xl">Grazie!</span>
+            <span className="text-xl font-normal">L'ordine è stato eseguito correttamente.</span>
           </Heading>
           <OrderDetails order={order} />
-          <Heading level="h2" className="flex flex-row text-3xl-regular">
-            Summary
+          <Heading level="h2" className="flex flex-row text-3xl">
+            Riepilogo
           </Heading>
           <Items items={order.items} region={order.region} />
           <CartTotals data={order} />

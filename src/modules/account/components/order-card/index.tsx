@@ -1,10 +1,10 @@
 import { Order } from "@medusajs/medusa"
-import { Button } from "@medusajs/ui"
 import { useMemo } from "react"
 
 import Thumbnail from "@modules/products/components/thumbnail"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import { formatAmount } from "@lib/util/prices"
+import { PillButton } from "@modules/common/components/pill-button"
 
 type OrderCardProps = {
   order: Omit<Order, "beforeInsert">
@@ -36,7 +36,7 @@ const OrderCard = ({ order }: OrderCardProps) => {
           })}
         </span>
         <span className="pl-2">{`${numberOfLines} ${
-          numberOfLines > 1 ? "items" : "item"
+          numberOfLines > 1 ? "prodotti" : "prodotto"
         }`}</span>
       </div>
       <div className="grid grid-cols-2 small:grid-cols-4 gap-4 my-4">
@@ -46,8 +46,7 @@ const OrderCard = ({ order }: OrderCardProps) => {
               <Thumbnail thumbnail={i.thumbnail} images={[]} size="full" />
               <div className="flex items-center text-small-regular text-ui-fg-base">
                 <span className="text-ui-fg-base font-semibold">{i.title}</span>
-                <span className="ml-2">x</span>
-                <span>{i.quantity}</span>
+                <span className="ml-2">x{i.quantity}</span>
               </div>
             </div>
           )
@@ -63,7 +62,7 @@ const OrderCard = ({ order }: OrderCardProps) => {
       </div>
       <div className="flex justify-end">
         <LocalizedClientLink href={`/account/orders/details/${order.id}`}>
-          <Button variant="secondary">Dettagli</Button>
+          <PillButton variant="secondary_border">Dettagli</PillButton>
         </LocalizedClientLink>
       </div>
     </div>

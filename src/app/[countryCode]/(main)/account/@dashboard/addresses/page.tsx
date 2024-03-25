@@ -8,7 +8,7 @@ import { getCustomer, getRegion } from "@lib/data"
 import { headers } from "next/headers"
 
 export const metadata: Metadata = {
-  title: "Indirizzi",
+  title: "SB Center | Indirizzi",
   description: "Visualizza i tuoi indirizzi",
 }
 

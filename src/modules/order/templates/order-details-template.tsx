@@ -1,7 +1,7 @@
 "use client"
 
 import { Order } from "@medusajs/medusa"
-import { XMark } from "@medusajs/icons"
+import { ChevronLeftMini } from "@medusajs/icons"
 import React from "react"
 
 import Help from "@modules/order/components/help"
@@ -24,9 +24,9 @@ const OrderDetailsTemplate: React.FC<OrderDetailsTemplateProps> = ({
         <h1 className="text-2xl-semi">Dettagli dell'ordine</h1>
         <LocalizedClientLink
           href="/account/orders"
-          className="flex gap-2 items-center text-ui-fg-subtle hover:text-ui-fg-base"
+          className="flex gap-1 items-center text-ui-fg-subtle hover:text-ui-fg-base"
         >
-          <XMark /> Back to overview
+          <ChevronLeftMini className="-mt-px" /> Torna al riepilogo
         </LocalizedClientLink>
       </div>
       <div className="flex flex-col gap-4 h-full bg-white w-full">

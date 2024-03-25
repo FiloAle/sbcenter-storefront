@@ -1,6 +1,8 @@
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import ChevronDown from "@modules/common/icons/chevron-down"
 import MedusaCTA from "@modules/layout/components/medusa-cta"
+import Image from "next/image"
+import logo from "../../../../public/sbcenter.png"
 
 export default function CheckoutLayout({
   children,
@@ -16,18 +18,21 @@ export default function CheckoutLayout({
             className="text-small-semi text-ui-fg-base flex items-center gap-x-2 uppercase flex-1 basis-0"
           >
             <ChevronDown className="rotate-90" size={16} />
-            <span className="mt-px hidden small:block txt-compact-plus text-ui-fg-subtle hover:text-ui-fg-base ">
+            <span className="mt-px hidden small:block text-md text-ui-fg-subtle hover:text-ui-fg-base ">
               Torna al carrello
             </span>
-            <span className="mt-px block small:hidden txt-compact-plus text-ui-fg-subtle hover:text-ui-fg-base">
+            <span className="mt-px block small:hidden text-md text-ui-fg-subtle hover:text-ui-fg-base">
               Indietro
             </span>
           </LocalizedClientLink>
           <LocalizedClientLink
             href="/"
-            className="txt-compact-xlarge-plus text-ui-fg-subtle hover:text-ui-fg-base"
           >
-            SB Center
+            <Image
+              src={logo}
+              alt="SB Center"
+              height={36}
+            />
           </LocalizedClientLink>
           <div className="flex-1 basis-0" />
         </nav>

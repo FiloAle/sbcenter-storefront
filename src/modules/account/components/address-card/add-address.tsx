@@ -96,12 +96,20 @@ const AddAddress = ({ region }: { region: Region }) => {
                   autoComplete="locality"
                 />
               </div>
-              <Input
-                label="Provincia"
-                name="province"
-                required
-                autoComplete="address-level1"
-              />
+              <div className="grid grid-cols-[144px_1fr] gap-x-2">
+                <Input
+                  label="Provincia"
+                  name="province"
+                  required
+                  autoComplete="address-level1"
+                />
+                <CountrySelect
+                 region={region}
+                 name="country_code"
+                 required
+                 autoComplete="country"
+                />
+              </div>
               <Input label="Telefono" name="phone" autoComplete="phone" />
             </div>
             {formState.error && (

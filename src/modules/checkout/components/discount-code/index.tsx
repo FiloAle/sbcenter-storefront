@@ -56,14 +56,14 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
   const [message, formAction] = useFormState(submitDiscountForm, null)
 
   return (
-    <div className="w-full bg-white flex flex-col">
-      <div className="txt-medium">
+    <div className="w-full bg-white flex flex-col font-sans">
+      <div className="text-md">
         {gift_cards.length > 0 && (
           <div className="flex flex-col mb-4">
-            <Heading className="txt-medium">Gift card applicata:</Heading>
+            <Heading className="text-md">Gift card applicata:</Heading>
             {gift_cards?.map((gc) => (
               <div
-                className="flex items-center justify-between txt-small-plus"
+                className="flex items-center justify-between text-sm"
                 key={gc.id}
               >
                 <Text className="flex gap-x-1 items-baseline">
@@ -92,9 +92,9 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
         {appliedDiscount ? (
           <div className="w-full flex items-center">
             <div className="flex flex-col w-full">
-              <Heading className="txt-medium">Sconto applicato:</Heading>
+              <Heading className="text-md">Sconto applicato:</Heading>
               <div className="flex items-center justify-between w-full max-w-full">
-                <Text className="flex gap-x-1 items-baseline txt-small-plus w-4/5 pr-1">
+                <Text className="flex gap-x-1 items-baseline text-sm w-4/5 pr-1">
                   <span>Code:</span>
                   <span className="truncate">{discounts[0].code}</span>
                   <span className="min-w-fit">({appliedDiscount})</span>
@@ -117,11 +117,11 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 type="button"
-                className="txt-medium text-ui-fg-interactive hover:text-ui-fg-interactive-hover"
+                className="text-md text-ui-fg-interactive hover:text-ui-fg-interactive-hover"
               >
                 Aggiungi gift card o codice sconto
               </button>
-              <Tooltip content="Puoi aggiungere più gift card o un solo codice sconto.">
+              <Tooltip className="font-sans" content="Puoi aggiungere più gift card o un solo codice sconto.">
                 <InformationCircleSolid color="var(--fg-muted)" />
               </Tooltip>
             </Label>

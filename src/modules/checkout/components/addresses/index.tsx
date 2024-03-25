@@ -104,62 +104,59 @@ const Addresses = ({
               <div className="flex items-start gap-x-8">
                 <div className="flex items-start gap-x-1 w-full">
                   <div className="flex flex-col w-1/3">
-                    <Text className="txt-medium-plus text-ui-fg-base mb-1">
+                    <Text className="text-md text-ui-fg-base mb-1">
                       Indirizzo di consegna
                     </Text>
-                    <Text className="txt-medium text-ui-fg-subtle">
+                    <Text className="text-md text-ui-fg-subtle">
                       {cart.shipping_address.first_name}{" "}
                       {cart.shipping_address.last_name}
                     </Text>
-                    <Text className="txt-medium text-ui-fg-subtle">
+                    <Text className="text-md text-ui-fg-subtle">
                       {cart.shipping_address.address_1}{" "}
                       {cart.shipping_address.address_2}
                     </Text>
-                    <Text className="txt-medium text-ui-fg-subtle">
+                    <Text className="text-md text-ui-fg-subtle">
                       {cart.shipping_address.postal_code},{" "}
-                      {cart.shipping_address.city}
-                    </Text>
-                    <Text className="txt-medium text-ui-fg-subtle">
-                      {cart.shipping_address.country_code?.toUpperCase()}
+                      {cart.shipping_address.city} {"("}{cart.shipping_address.province}{")"}
                     </Text>
                   </div>
 
                   <div className="flex flex-col w-1/3 ">
-                    <Text className="txt-medium-plus text-ui-fg-base mb-1">
+                    <Text className="text-md text-ui-fg-base mb-1">
                       Recapito
                     </Text>
-                    <Text className="txt-medium text-ui-fg-subtle">
+                    <Text className="text-md text-ui-fg-subtle">
                       {cart.shipping_address.phone}
                     </Text>
-                    <Text className="txt-medium text-ui-fg-subtle">
+                    <Text className="text-md text-ui-fg-subtle">
                       {cart.email}
                     </Text>
                   </div>
 
                   <div className="flex flex-col w-1/3">
-                    <Text className="txt-medium-plus text-ui-fg-base mb-1">
+                    <Text className="text-md text-ui-fg-base mb-1">
                       Indirizzo di fatturazione
                     </Text>
 
                     {sameAsSBilling ? (
-                      <Text className="txt-medium text-ui-fg-subtle">
+                      <Text className="text-md text-ui-fg-subtle">
                         L'indirizzo di fatturazione e di consegna coincidono.
                       </Text>
                     ) : (
                       <>
-                        <Text className="txt-medium text-ui-fg-subtle">
+                        <Text className="text-md text-ui-fg-subtle">
                           {cart.billing_address.first_name}{" "}
                           {cart.billing_address.last_name}
                         </Text>
-                        <Text className="txt-medium text-ui-fg-subtle">
+                        <Text className="text-md text-ui-fg-subtle">
                           {cart.billing_address.address_1}{" "}
                           {cart.billing_address.address_2}
                         </Text>
-                        <Text className="txt-medium text-ui-fg-subtle">
+                        <Text className="text-md text-ui-fg-subtle">
                           {cart.billing_address.postal_code},{" "}
                           {cart.billing_address.city}
                         </Text>
-                        <Text className="txt-medium text-ui-fg-subtle">
+                        <Text className="text-md text-ui-fg-subtle">
                           {cart.billing_address.country_code?.toUpperCase()}
                         </Text>
                       </>

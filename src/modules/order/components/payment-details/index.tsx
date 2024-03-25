@@ -38,11 +38,11 @@ const PaymentDetails = ({ order }: PaymentDetailsProps) => {
                 <Text>
                   {payment.provider_id === "stripe" && payment.data.card_last4
                     ? `**** **** **** ${payment.data.card_last4}`
-                    : `${formatAmount({
+                    : `Pagamento di ${formatAmount({
                         amount: payment.amount,
                         region: order.region,
                         includeTaxes: false,
-                      })} paid at ${new Date(payment.created_at).toString()}`}
+                      })} eseguito correttamente.`}
                 </Text>
               </div>
             </div>

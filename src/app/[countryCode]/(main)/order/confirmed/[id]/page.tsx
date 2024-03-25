@@ -28,7 +28,7 @@ async function getOrder(id: string) {
 }
 
 export const metadata: Metadata = {
-  title: "Ordine confermato",
+  title: "SB Center | Ordine confermato",
   description: "Il tuo acquisto è riuscito",
 }
 

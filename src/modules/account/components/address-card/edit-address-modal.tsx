@@ -77,7 +77,7 @@ const EditAddress: React.FC<EditAddressProps> = ({
             {address.first_name} {address.last_name}
           </Heading>
           {address.company && (
-            <Text className="txt-compact-small text-ui-fg-base">
+            <Text className="text-sm text-ui-fg-base">
               {address.company}
             </Text>
           )}
@@ -88,10 +88,10 @@ const EditAddress: React.FC<EditAddressProps> = ({
             </span>
             <span>
               {address.postal_code}, {address.city}
+              {address.province && ` (${address.province})`}
             </span>
-            <span>
-              {address.province && `${address.province}, `}
-              {address.country_code?.toUpperCase()}
+            <span className="uppercase">
+              {address.country_code}
             </span>
           </Text>
         </div>
@@ -104,7 +104,7 @@ const EditAddress: React.FC<EditAddressProps> = ({
             Modifica
           </button>
           <button
-            className="text-small-regular text-ui-fg-base flex items-center gap-x-2"
+            className="text-small-regular text-red-500 hover:text-red-700 flex items-center gap-x-2"
             onClick={removeAddress}
           >
             {removing ? <Spinner /> : <Trash />}
