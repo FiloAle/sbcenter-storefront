@@ -217,6 +217,7 @@ const ManualTestPaymentButton = ({ notReady }: { notReady: boolean }) => {
         isLoading={submitting}
         onClick={handlePayment}
         size="large"
+        className="rounded-full bg-black text-white shadow-md hover:bg-slate-900 hover:shadow-lg dark:bg-white dark:text-black dark:hover:bg-slate-50"
       >
         Ordina e paga
       </Button>

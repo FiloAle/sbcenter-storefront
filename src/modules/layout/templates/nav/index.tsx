@@ -2,9 +2,9 @@ import { Suspense } from "react"
 import { ShoppingBag, User } from "@medusajs/icons"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import CartButton from "@modules/layout/components/cart-button"
-import SideMenu from "@modules/layout/components/side-menu"
 import Image from "next/image"
 import logo from "../../../../../public/sbcenter.png"
+import SideMenu from "@modules/layout/components/menu"
 
 export default async function Nav() {
   return (
@@ -17,7 +17,7 @@ export default async function Nav() {
             </div>
           </div>
 
-          <div className="flex items-center h-full transition-all hover:opacity-70">
+          <div className="flex items-center h-full transition-all opacity-90 hover:opacity-60">
             <LocalizedClientLink
               href="/"
             >
@@ -33,7 +33,7 @@ export default async function Nav() {
             <div className="hidden small:flex items-center gap-x-6 h-full">
               {process.env.FEATURE_SEARCH_ENABLED && (
                 <LocalizedClientLink
-                  className="text-black transition-all hover:text-slate-600"
+                  className="text-slate-600 transition-all hover:text-yellow-500"
                   href="/search"
                   scroll={false}
                 >
@@ -41,7 +41,7 @@ export default async function Nav() {
                 </LocalizedClientLink>
               )}
               <LocalizedClientLink
-                className="text-black transition-all hover:text-slate-600"
+                className="text-slate-600 transition-all hover:text-yellow-500"
                 href="/account"
               >
                 <User/>
@@ -50,10 +50,10 @@ export default async function Nav() {
             <Suspense
               fallback={
                 <LocalizedClientLink
-                  className="text-black transition-all hover:text-slate-600 flex gap-2"
+                  className="text-slate-600 transition-all hover:text-yellow-500 flex gap-2"
                   href="/cart"
                 >
-                  <ShoppingBag/> <div className="mt-px ms-px pt-0.5 h-5 w-5 bg-yellow-500 rounded-full text-ui-fg-base font-semibold text-center items-center justify-center">0</div>
+                  <ShoppingBag/> <div className="mt-px ms-px pt-0.5 h-5 w-5 bg-slate-600 rounded-full text-white font-semibold text-center items-center justify-center">0</div>
                 </LocalizedClientLink>
               }
             >

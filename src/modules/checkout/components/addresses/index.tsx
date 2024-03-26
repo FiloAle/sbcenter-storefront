@@ -63,7 +63,7 @@ const Addresses = ({
           <Text>
             <button
               onClick={handleEdit}
-              className="text-ui-fg-interactive hover:text-ui-fg-interactive-hover"
+              className="transition-all text-yellow-500 hover:text-yellow-600"
             >
               Modifica
             </button>

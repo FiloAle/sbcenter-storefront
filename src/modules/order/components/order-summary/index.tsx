@@ -31,17 +31,13 @@ const OrderSummary = ({ order }: OrderSummaryProps) => {
           )}
           {order.gift_card_total > 0 && (
             <div className="flex items-center justify-between">
-              <span>Sconto</span>
+              <span>Gift card</span>
               <span>- {getAmount(order.gift_card_total)}</span>
             </div>
           )}
           <div className="flex items-center justify-between">
             <span>Spedizione</span>
             <span>{getAmount(order.shipping_total)}</span>
-          </div>
-          <div className="flex items-center justify-between">
-            <span>IVA</span>
-            <span>{getAmount(order.tax_total)}</span>
           </div>
         </div>
         <div className="h-px w-full border-b border-gray-200 border-dashed my-4" />

@@ -22,7 +22,7 @@ export default function ProductRail({
     <div className="content-container">
       <div className="flex justify-between mb-4">
         <Text className="text-2xl font-serif">Prenditi cura di te</Text>
-        <InteractiveLink href={`/collections/${collection.handle}`}>
+        <InteractiveLink href={`/store`}>
           Vedi tutti
         </InteractiveLink>
       </div>

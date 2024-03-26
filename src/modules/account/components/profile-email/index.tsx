@@ -44,7 +44,6 @@ const ProfileEmail: React.FC<MyInformationProps> = ({ customer }) => {
             label="Email"
             name="email"
             type="email"
-            autoComplete="email"
             required
             defaultValue={customer.email}
           />

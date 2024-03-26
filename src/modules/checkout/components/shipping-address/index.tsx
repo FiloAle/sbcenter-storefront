@@ -77,7 +77,7 @@ const ShippingAddress = ({
   return (
     <>
       {customer && (addressesInRegion?.length || 0) > 0 && (
-        <Container className="mb-6 flex flex-col gap-y-4 p-5">
+        <Container className="mb-6 flex flex-col gap-y-4 p-5 rounded-xl">
           <p className="text-small-regular">
             {`Ciao ${customer.first_name}, vuoi utilizzare uno dei tuoi indirizzi preferiti?`}
           </p>

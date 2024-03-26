@@ -8,11 +8,11 @@ const MedusaCTA = () => {
     <Text className="flex gap-x-2 txt-compact-small-plus items-center">
       Realizzato da
       <a href="https://www.medusajs.com" target="_blank" rel="noreferrer">
-        <Medusa fill="#9ca3af" className="fill-[#9ca3af]" />
+        <Medusa className="transition-all duration-300 fill-[#aaaaaa] hover:fill-[#000000]"/>
       </a>
       e
       <a href="https://nextjs.org" target="_blank" rel="noreferrer">
-        <NextJs fill="#9ca3af" />
+        <NextJs className="transition-all duration-300 fill-[#aaaaaa] hover:fill-[#000000]"/>
       </a>
     </Text>
   )

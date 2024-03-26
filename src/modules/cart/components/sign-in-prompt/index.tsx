@@ -1,5 +1,6 @@
-import { Button, Heading, Text } from "@medusajs/ui"
+import { Heading, Text } from "@medusajs/ui"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
+import { PillButton } from "@modules/common/components/pill-button"
 
 const SignInPrompt = () => {
   return (
@@ -14,9 +15,9 @@ const SignInPrompt = () => {
       </div>
       <div>
         <LocalizedClientLink href="/account">
-          <Button variant="secondary" className="h-10">
+          <PillButton variant="secondary_border" className="h-10">
             Accedi
-          </Button>
+          </PillButton>
         </LocalizedClientLink>
       </div>
     </div>

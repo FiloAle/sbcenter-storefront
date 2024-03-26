@@ -78,25 +78,25 @@ const CartDropdown = ({
       onMouseLeave={close}
     >
       <Popover className="relative h-full">
-        <Popover.Button className="h-full text-black transition-all hover:text-slate-600">
-          <LocalizedClientLink
-            className="flex flex-row"
-            href="/cart"
-          ><ShoppingBag/> <div className="mt-px ms-px pt-0.5 h-5 w-5 bg-yellow-500 rounded-full text-black font-semibold text-center items-center justify-center">{`${totalItems}`}</div></LocalizedClientLink>
+        <Popover.Button className="h-full text-slate-600 transition-all hover:text-yellow-500">
+          <LocalizedClientLink className="flex flex-row" href="/cart">
+            <ShoppingBag />
+            <div className="mt-px ms-px pt-0.5 h-5 w-5 bg-slate-600 rounded-full text-white font-semibold text-center items-center justify-center">{`${totalItems}`}</div>
+          </LocalizedClientLink>
         </Popover.Button>
         <Transition
           show={cartDropdownOpen}
           as={Fragment}
           enter="transition ease-out duration-200"
-          enterFrom="opacity-0 translate-y-1"
-          enterTo="opacity-100 translate-y-0"
-          leave="transition ease-in duration-150"
-          leaveFrom="opacity-100 translate-y-0"
-          leaveTo="opacity-0 translate-y-1"
+          enterFrom="opacity-0 translate-y-0"
+          enterTo="opacity-100 translate-y-1"
+          leave="transition delay-500 ease-in duration-150"
+          leaveFrom="opacity-100 translate-y-1"
+          leaveTo="opacity-0 translate-y-0"
         >
           <Popover.Panel
             static
-            className="hidden small:block absolute top-[calc(100%+28px)] right-0 bg-white border border-gray-200 w-[420px] text-black rounded-xl shadow-md"
+            className="hidden small:block absolute mt-4 -me-1 right-0 bg-white border border-slate-200 w-[420px] text-black rounded-xl shadow-md"
           >
             {cartState && cartState.items?.length ? (
               <>

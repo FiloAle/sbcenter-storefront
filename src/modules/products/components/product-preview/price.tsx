@@ -6,13 +6,13 @@ export default async function PreviewPrice({ price }: { price: PriceType }) {
   return (
     <>
       {price.price_type === "sale" && (
-        <Text className="line-through text-ui-fg-muted">
+        <Text className="line-through text-slate-400">
           {price.original_price}
         </Text>
       )}
       <Text
-        className={clx("text-ui-fg-muted", {
-          "text-ui-fg-interactive": price.price_type === "sale",
+        className={clx("text-slate-400", {
+          "text-yellow-500": price.price_type === "sale",
         })}
       >
         {price.calculated_price}

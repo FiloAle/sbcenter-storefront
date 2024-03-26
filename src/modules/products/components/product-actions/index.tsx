@@ -152,7 +152,7 @@ export default function ProductActions({
           onClick={handleAddToCart}
           disabled={!inStock || !variant}
           variant="primary"
-          className="w-full h-10"
+          className="w-full h-10 rounded-full bg-black text-white shadow-md hover:bg-slate-900 hover:shadow-lg dark:bg-white dark:text-black dark:hover:bg-slate-50"
           isLoading={isAdding}
         >
           {!variant

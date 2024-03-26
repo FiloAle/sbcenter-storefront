@@ -113,16 +113,16 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
           </div>
         ) : (
           <form action={formAction} className="w-full">
-            <Label className="flex gap-x-1 my-2 items-center">
+            <Label className="flex gap-x-1 my-2 items-center justify-between">
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 type="button"
-                className="text-md text-ui-fg-interactive hover:text-ui-fg-interactive-hover"
+                className="!text-md transition-all text-yellow-500 hover:text-yellow-600"
               >
                 Aggiungi gift card o codice sconto
               </button>
               <Tooltip className="font-sans" content="Puoi aggiungere più gift card o un solo codice sconto.">
-                <InformationCircleSolid color="var(--fg-muted)" />
+                <InformationCircleSolid className="hidden lg:block transition-all text-yellow-500 hover:text-yellow-600" />
               </Tooltip>
             </Label>
             {isOpen && (
@@ -134,7 +134,7 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
                     type="text"
                     autoFocus={false}
                   />
-                  <SubmitButton variant="secondary">Applica</SubmitButton>
+                  <SubmitButton variant="secondary" className="px-5">Applica</SubmitButton>
                 </div>
                 <ErrorMessage error={message} />
               </>

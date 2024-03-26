@@ -98,7 +98,7 @@ const MobileActions: React.FC<MobileActionsProps> = ({
               )}
             </div>
             <div className="grid grid-cols-2 w-full gap-x-4">
-              <Button onClick={open} variant="secondary" className="w-full">
+              <Button onClick={open} variant="secondary" className="w-full rounded-full">
                 <div className="flex items-center justify-between w-full">
                   <span>
                     {variant
@@ -111,7 +111,7 @@ const MobileActions: React.FC<MobileActionsProps> = ({
               <Button
                 onClick={handleAddToCart}
                 disabled={!inStock || !variant}
-                className="w-full"
+                className="w-full rounded-full !bg-black text-white shadow-md hover:bg-slate-900 hover:shadow-lg dark:bg-white dark:text-black dark:hover:bg-slate-50"
                 isLoading={isAdding}
               >
                 {!variant

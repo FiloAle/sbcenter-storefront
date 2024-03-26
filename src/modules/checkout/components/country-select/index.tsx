@@ -34,7 +34,7 @@ const CountrySelect = forwardRef<
       ref={innerRef}
       placeholder={placeholder}
       defaultValue={defaultValue}
-      className="txt-compact-medium-plus"
+      className="txt-compact-medium-plus rounded-full"
       {...props}
     >
       {countryOptions.map(({ value }, index) => (
