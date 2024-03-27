@@ -39,12 +39,12 @@ export default async function ProductPreview({
       href={`/products/${productPreview.handle}`}
       className="group"
     >
-      <div className="transition-all duration-300 rounded-xl border border-slate-400 shadow-md hover:shadow-lg !overflow-hidden">
+      <div className="transition-all duration-300 rounded-xl border border-slate-600 shadow-md hover:shadow-lg !overflow-hidden">
         <Thumbnail
           thumbnail={productPreview.thumbnail}
           size="full"
           isFeatured={isFeatured}
-          className="!rounded-none !shadow-none border-b border-slate-400"
+          className="!rounded-none !shadow-none border-b border-slate-600"
         />
         <div className="flex flex-col text-md mt-4 px-3 pb-4 sm:px-4 sm:pt-1 sm:pb-4 justify-between items-start">
           <Text className="text-slate-600 line-clamp-2 sm:line-clamp-1">{productPreview.title}</Text>

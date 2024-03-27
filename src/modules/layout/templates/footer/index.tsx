@@ -4,8 +4,8 @@ import Image from "next/image"
 import { getCategoriesList, getCollectionsList } from "@lib/data"
 
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
-import MedusaCTA from "@modules/layout/components/medusa-cta"
-import logo from "../../../../../public/sbcenter.png"
+import Credits from "@modules/layout/components/credits"
+import logo from "../../../../../public/sbcenter.svg"
 
 export default async function Footer() {
   const { collections } = await getCollectionsList(0, 6)
@@ -23,6 +23,7 @@ export default async function Footer() {
               src={logo}
               alt="SB Center"
               height={48}
+              className="!cursor-pointer"
               />
             </LocalizedClientLink>
           </div>
@@ -140,11 +141,11 @@ export default async function Footer() {
             </div>
           </div>
         </div>
-        <div className="flex w-full mb-16 justify-between text-ui-fg-muted">
+        <div className="flex flex-col sm:flex-row w-full mb-16 justify-between text-ui-fg-muted">
           <Text className="text-sm">
             © {new Date().getFullYear()} SB Center. Tutti i diritti riservati.
           </Text>
-          <MedusaCTA />
+          <Credits />
         </div>
       </div>
     </footer>

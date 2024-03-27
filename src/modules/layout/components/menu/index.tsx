@@ -8,14 +8,6 @@ import { HomeIcon, Squares2X2Icon, SparklesIcon, UserIcon } from "@heroicons/rea
 
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 
-const SideMenuItems = {
-  Home: "/",
-  Store: "/store",
-  Cerca: "/search",
-  Account: "/account",
-  Carrello: "/cart",
-}
-
 const SideMenu = () => {
     const toggleState = useToggleState()
     
@@ -25,7 +17,14 @@ const SideMenu = () => {
             <>
                 <div className="h-full flex items-center">
                     <Popover.Button className="text-slate-600 transition-all focus:outline-none hover:text-yellow-500">
-                        <BarsThree/>
+                        <div className="group/hamburger flex flex-col justify-center items-center">
+                            <span className={`bg-slate-600 group-hover/hamburger:bg-yellow-500 block transition-all duration-300 h-0.5 w-5 rounded-sm ${open ? 'rotate-45 translate-y-1' : '-translate-y-0.5'}`}>
+                            </span>
+                            <span className={`bg-slate-600 group-hover/hamburger:bg-yellow-500 block transition-all duration-300 h-0.5 w-5 rounded-sm my-0.5 ${open ?  'opacity-0' : 'opacity-100'}`}>
+                            </span>
+                            <span className={`bg-slate-600 group-hover/hamburger:bg-yellow-500 block transition-all duration-300 h-0.5 w-5 rounded-sm ${open ? '-rotate-45 -translate-y-1' : 'translate-y-0.5'}`}>
+                            </span>    
+                        </div>
                     </Popover.Button>
                 </div>
 
@@ -38,7 +37,7 @@ const SideMenu = () => {
                     leaveFrom="opacity-100 translate-y-1"
                     leaveTo="opacity-0 translate-y-0"
                 >
-                    <Popover.Panel className="absolute z-10 mt-4 -ms-1 w-56 origin-top-left rounded-xl bg-white shadow-md border border-slate-200 focus:outline-none">
+                    <Popover.Panel className="absolute z-10 mt-5 w-56 origin-top-left rounded-xl bg-white shadow-md border border-slate-200 focus:outline-none">
                         <div className="py-4 px-5">
                             <ul className="flex flex-col gap-3 items-start justify-start">
                                 <li>

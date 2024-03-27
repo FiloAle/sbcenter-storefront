@@ -7,7 +7,7 @@ import bgImage from "../../../../../public/spa.jpg"
 
 const Hero = () => {
   return (
-    <div className="h-[75vh] pt-5 px-6 w-full relative flex justify-center items-center">
+    <div className="h-[75vh] pt-6 px-6 pb-2 w-full relative flex justify-center items-center">
       <Image
         src={bgImage}
         alt="SPA"

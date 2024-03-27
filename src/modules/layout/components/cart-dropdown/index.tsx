@@ -96,7 +96,7 @@ const CartDropdown = ({
         >
           <Popover.Panel
             static
-            className="hidden small:block absolute mt-4 -me-1 right-0 bg-white border border-slate-200 w-[420px] text-black rounded-xl shadow-md"
+            className="hidden small:block absolute mt-5 right-0 bg-white border border-slate-200 w-[420px] text-black rounded-xl shadow-md"
           >
             {cartState && cartState.items?.length ? (
               <>
