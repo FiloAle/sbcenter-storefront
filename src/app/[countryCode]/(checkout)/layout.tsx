@@ -2,7 +2,7 @@ import LocalizedClientLink from "@modules/common/components/localized-client-lin
 import ChevronDown from "@modules/common/icons/chevron-down"
 import MedusaCTA from "@modules/layout/components/medusa-cta"
 import Image from "next/image"
-import logo from "../../../../public/sbcenter.png"
+import logo from "../../../../public/sbcenter.svg"
 
 export default function CheckoutLayout({
   children,

@@ -2,7 +2,9 @@ import { Text } from "@medusajs/ui"
 
 import { ProductPreviewType } from "types/global"
 
-import { retrievePricedProductById } from "@lib/data"
+import { getProductsByCollectionHandle, retrievePricedProductById } from "@lib/data"
+import { PricedProduct } from "@medusajs/medusa/dist/types/pricing"
+
 import { getProductPrice } from "@lib/util/get-product-price"
 import { Region } from "@medusajs/medusa"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
@@ -37,14 +39,15 @@ export default async function ProductPreview({
       href={`/products/${productPreview.handle}`}
       className="group"
     >
-      <div>
+      <div className="transition-all duration-300 rounded-xl border border-slate-400 shadow-md hover:shadow-lg !overflow-hidden">
         <Thumbnail
           thumbnail={productPreview.thumbnail}
           size="full"
           isFeatured={isFeatured}
+          className="!rounded-none !shadow-none border-b border-slate-400"
         />
-        <div className="flex text-md mt-4 justify-between items-start">
-          <Text className="text-slate-600">{productPreview.title}</Text>
+        <div className="flex flex-col text-md mt-4 px-3 pb-4 sm:px-4 sm:pt-1 sm:pb-4 justify-between items-start">
+          <Text className="text-slate-600 line-clamp-2 sm:line-clamp-1">{productPreview.title}</Text>
           <div className="flex items-center gap-x-2">
             {cheapestPrice && <PreviewPrice price={cheapestPrice} />}
           </div>

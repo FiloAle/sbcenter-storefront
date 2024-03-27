@@ -47,6 +47,10 @@ const ProductInfoTab = ({ product }: ProductTabsProps) => {
     <div className="text-small-regular py-8">
       <div className="grid grid-cols-2 gap-x-8">
         <div className="flex flex-col gap-y-4">
+        <div>
+            <span className="font-semibold">Categoria</span>
+            <p>{product.type ? product.type.value : "-"}</p>
+          </div>
           <div>
             <span className="font-semibold">Ingredienti</span>
             <p>{product.material ? product.material : "-"}</p>
@@ -54,10 +58,6 @@ const ProductInfoTab = ({ product }: ProductTabsProps) => {
           <div>
             <span className="font-semibold">Prodotto in</span>
             <p>{product.origin_country ? product.origin_country : "-"}</p>
-          </div>
-          <div>
-            <span className="font-semibold">Tipo</span>
-            <p>{product.type ? product.type.value : "-"}</p>
           </div>
         </div>
         <div className="flex flex-col gap-y-4">

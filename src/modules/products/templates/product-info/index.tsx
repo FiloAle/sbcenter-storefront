@@ -15,7 +15,7 @@ const ProductInfo = ({ product }: ProductInfoProps) => {
             href={`/collections/${product.collection.handle}`}
             className="flex text-md transition-all text-slate-400 hover:text-slate-600"
           >
-            #{product.collection.title}
+            {product.collection.title}
           </LocalizedClientLink>
         )}
 

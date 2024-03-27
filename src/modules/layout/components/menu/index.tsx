@@ -4,6 +4,7 @@ import { Popover, Transition } from "@headlessui/react"
 import { BarsThree } from "@medusajs/icons"
 import { useToggleState } from "@medusajs/ui"
 import { Fragment } from "react"
+import { HomeIcon, Squares2X2Icon, SparklesIcon, UserIcon } from "@heroicons/react/24/outline"
 
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 
@@ -38,21 +39,44 @@ const SideMenu = () => {
                     leaveTo="opacity-0 translate-y-0"
                 >
                     <Popover.Panel className="absolute z-10 mt-4 -ms-1 w-56 origin-top-left rounded-xl bg-white shadow-md border border-slate-200 focus:outline-none">
-                        <div className="py-3 px-4">
-                            <ul className="flex flex-col gap-2 items-start justify-start">
-                                {Object.entries(SideMenuItems).map(([name, href]) => {
-                                return (
-                                    <li key={name}>
+                        <div className="py-4 px-5">
+                            <ul className="flex flex-col gap-3 items-start justify-start">
+                                <li>
                                     <LocalizedClientLink
-                                        href={href}
-                                        className="text-lg text-slate-600 transition-all hover:text-yellow-500"
+                                        href="/"
+                                        className="flex text-lg font-light text-slate-600 transition-all hover:text-yellow-500 gap-2"
                                         onClick={close}
                                     >
-                                        {name}
+                                        <HomeIcon height={20} className="h-full pt-[3px]"/> Home
                                     </LocalizedClientLink>
-                                    </li>
-                                )
-                                })}
+                                </li>
+                                <li>
+                                    <LocalizedClientLink
+                                        href="/"
+                                        className="flex text-lg font-light text-slate-600 transition-all hover:text-yellow-500 gap-2"
+                                        onClick={close}
+                                    >
+                                        <SparklesIcon height={20} className="h-full pt-[3px]"/> Servizi
+                                    </LocalizedClientLink>
+                                </li>
+                                <li>
+                                    <LocalizedClientLink
+                                        href="/store"
+                                        className="flex text-lg font-light text-slate-600 transition-all hover:text-yellow-500 gap-2"
+                                        onClick={close}
+                                    >
+                                        <Squares2X2Icon height={20} className="h-full pt-[3px]"/> Shop
+                                    </LocalizedClientLink>
+                                </li>
+                                <li className="lg:hidden">
+                                    <LocalizedClientLink
+                                        href="/account"
+                                        className="flex text-lg font-light text-slate-600 transition-all hover:text-yellow-500 gap-2"
+                                        onClick={close}
+                                    >
+                                        <UserIcon height={20} className="h-full pt-[3px]"/> Account
+                                    </LocalizedClientLink>
+                                </li>
                             </ul>
                         </div>
                     </Popover.Panel>

@@ -3,14 +3,14 @@ import Image from 'next/image'
 import { ChevronRightMini } from "@medusajs/icons"
 import { PillButton } from "@modules/common/components/pill-button"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
-import bgImage from "../../../../../public/spa.jpg"
+import bgImage from "../../../../../public/servizi.jpg"
 
-const Hero = () => {
+const HeroSecondary = () => {
   return (
-    <div className="h-[75vh] pt-5 px-6 w-full relative flex justify-center items-center">
+    <div className="h-[75vh] py-5 px-6 w-full relative flex justify-center items-center">
       <Image
         src={bgImage}
-        alt="SPA"
+        alt="Servizi"
         quality={100}
         style={{
           objectFit: 'cover',
@@ -24,12 +24,12 @@ const Hero = () => {
             level="h2"
             className="text-3xl sm:text-4xl leading-10 text-white font-serif"
           >
-            La tua bellezza<br/>ha un'anima.
+            Il tuo benessere<br/>parte da qui.
           </Heading>
         </span>
         <LocalizedClientLink href="/store">
           <PillButton variant="primary" className="font-normal motion-safe:animate-pulse duration-1200 hover:animate-none">
-            Scopri la SPA <ChevronRightMini className="-me-1"/>
+            Scopri i servizi <ChevronRightMini className="-me-1"/>
           </PillButton>
         </LocalizedClientLink>
       </div>
@@ -37,4 +37,4 @@ const Hero = () => {
   )
 }
 
-export default Hero
+export default HeroSecondary

@@ -6,6 +6,7 @@ import FeaturedProducts from "@modules/home/components/featured-products"
 import Hero from "@modules/home/components/hero"
 import { ProductCollectionWithPreviews } from "types/global"
 import { cache } from "react"
+import HeroSecondary from "@modules/home/components/hero-secondary"
 
 export const metadata: Metadata = {
   title: "SB Center",
@@ -74,6 +75,7 @@ export default async function Home({
           <FeaturedProducts collections={collections} region={region} />
         </ul>
       </div>
+      <HeroSecondary/>
     </>
   )
 }
