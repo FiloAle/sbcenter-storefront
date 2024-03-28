@@ -1,10 +1,11 @@
 "use client"
 
 import { Popover, Transition } from "@headlessui/react"
-import { BarsThree } from "@medusajs/icons"
 import { useToggleState } from "@medusajs/ui"
 import { Fragment } from "react"
 import { HomeIcon, Squares2X2Icon, SparklesIcon, UserIcon } from "@heroicons/react/24/outline"
+
+import Hamburger from "./hamburger"
 
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 
@@ -15,16 +16,9 @@ const SideMenu = () => {
         <Popover className="h-full">
             {({ open, close }) => (
             <>
-                <div className="h-full flex items-center">
-                    <Popover.Button className="text-slate-600 transition-all focus:outline-none hover:text-yellow-500">
-                        <div className="group/hamburger flex flex-col justify-center items-center">
-                            <span className={`bg-slate-600 group-hover/hamburger:bg-yellow-500 block transition-all duration-300 h-0.5 w-5 rounded-sm ${open ? 'rotate-45 translate-y-1' : '-translate-y-0.5'}`}>
-                            </span>
-                            <span className={`bg-slate-600 group-hover/hamburger:bg-yellow-500 block transition-all duration-300 h-0.5 w-5 rounded-sm my-0.5 ${open ?  'opacity-0' : 'opacity-100'}`}>
-                            </span>
-                            <span className={`bg-slate-600 group-hover/hamburger:bg-yellow-500 block transition-all duration-300 h-0.5 w-5 rounded-sm ${open ? '-rotate-45 -translate-y-1' : 'translate-y-0.5'}`}>
-                            </span>    
-                        </div>
+                <div className="h-full w-full flex items-center">
+                    <Popover.Button className="focus:outline-none">
+                        <Hamburger open={open}/>
                     </Popover.Button>
                 </div>
 
