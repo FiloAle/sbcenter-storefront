@@ -23,7 +23,7 @@ const InteractiveLink = ({
     >
       <Text>{children}</Text>
       <ArrowUpRightMini
-        className="group-hover:rotate-45 ease-in-out duration-150"
+        className="group-hover:rotate-45 duration-200"
       />
     </LocalizedClientLink>
   )
