@@ -26,7 +26,7 @@ export default async function Services() {
                             </div>
                             <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-32 gap-y-1 text-slate-600">
                                 {sbservices.sb.personalcare.map((service) => (
-                                    <li className="flex flex-row justify-between">
+                                    <li key={service.name} className="flex flex-row justify-between">
                                         <Text>{service.name}</Text>
                                         <Text>{service.price}€</Text>
                                     </li>
@@ -39,7 +39,7 @@ export default async function Services() {
                             </div>
                             <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-32 gap-y-1 text-slate-600">
                                 {sbservices.sb.epilazione.map((service) => (
-                                    <li className="flex flex-row justify-between">
+                                    <li key={service.name} className="flex flex-row justify-between">
                                         <Text>{service.name}</Text>
                                         <Text>{service.price}€</Text>
                                     </li>
@@ -52,7 +52,7 @@ export default async function Services() {
                             </div>
                             <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-32 gap-y-1 text-slate-600">
                                 {sbservices.sb.massaggi.map((service) => (
-                                    <li className="flex flex-row justify-between">
+                                    <li key={service.name} className="flex flex-row justify-between">
                                         <Text>{service.name}</Text>
                                         <Text>{service.price}€</Text>
                                     </li>
@@ -72,7 +72,7 @@ export default async function Services() {
                             </div>
                             <ul className="grid grid-cols-1 gap-x-32 gap-y-1 text-slate-600">
                                 {sbservices.esth.map((service) => (
-                                    <li className="flex flex-row justify-between">
+                                    <li key={service.name} className="flex flex-row justify-between">
                                         <Text>{service.name}</Text>
                                         <Text>{service.price}€</Text>
                                     </li>
@@ -92,7 +92,7 @@ export default async function Services() {
                             </div>
                             <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-32 gap-y-1 text-slate-600">
                                 {sbservices.dibi.manualiviso.map((service) => (
-                                    <li className="flex flex-row justify-between">
+                                    <li key={service.name} className="flex flex-row justify-between">
                                         <Text>{service.name}</Text>
                                         <Text>{service.price}€</Text>
                                     </li>
@@ -105,7 +105,7 @@ export default async function Services() {
                             </div>
                             <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-32 gap-y-1 text-slate-600">
                                 {sbservices.dibi.manualicorpo.map((service) => (
-                                    <li className="flex flex-row justify-between">
+                                    <li key={service.name} className="flex flex-row justify-between">
                                         <Text>{service.name}</Text>
                                         <Text>{service.price}€</Text>
                                     </li>
@@ -118,7 +118,7 @@ export default async function Services() {
                             </div>
                             <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-32 gap-y-1 text-slate-600">
                                 {sbservices.dibi.dibiviso.map((service) => (
-                                    <li className="flex flex-row justify-between">
+                                    <li key={service.name} className="flex flex-row justify-between">
                                         <Text>{service.name}</Text>
                                         <Text>{service.price}€</Text>
                                     </li>
@@ -131,7 +131,7 @@ export default async function Services() {
                             </div>
                             <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-32 gap-y-1 text-slate-600">
                                 {sbservices.dibi.dibicorpo.map((service) => (
-                                    <li className="flex flex-row justify-between">
+                                    <li key={service.name} className="flex flex-row justify-between">
                                         <Text>{service.name}</Text>
                                         <Text>{service.price}€</Text>
                                     </li>
@@ -151,7 +151,7 @@ export default async function Services() {
                             </div>
                             <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-32 gap-y-1 text-slate-600">
                                 {sbservices.cz.viso.map((service) => (
-                                    <li className="flex flex-row justify-between">
+                                    <li key={service.name} className="flex flex-row justify-between">
                                         <Text>{service.name}</Text>
                                         <Text>{service.price}€</Text>
                                     </li>
@@ -164,7 +164,7 @@ export default async function Services() {
                             </div>
                             <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-32 gap-y-1 text-slate-600">
                                 {sbservices.cz.corpo.map((service) => (
-                                    <li className="flex flex-row justify-between">
+                                    <li key={service.name} className="flex flex-row justify-between">
                                         <Text>{service.name}</Text>
                                         <Text>{service.price}€</Text>
                                     </li>
@@ -177,7 +177,7 @@ export default async function Services() {
                             </div>
                             <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-32 gap-y-1 text-slate-600">
                                 {sbservices.cz.rituali.map((service) => (
-                                    <li className="flex flex-row justify-between">
+                                    <li key={service.name} className="flex flex-row justify-between">
                                         <Text>{service.name}</Text>
                                         <Text>{service.price}€</Text>
                                     </li>
@@ -190,7 +190,7 @@ export default async function Services() {
                             </div>
                             <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-32 gap-y-1 text-slate-600">
                                 {sbservices.cz.spa.map((service) => (
-                                    <li className="flex flex-row justify-between">
+                                    <li key={service.name} className="flex flex-row justify-between">
                                         <Text>{service.name}</Text>
                                         <Text>{service.price}€</Text>
                                     </li>
