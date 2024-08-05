@@ -16,13 +16,12 @@ export default function NotFound() {
         La pagina che stai cercando non esiste.
       </p>
       <Link
-        className="flex gap-x-1 items-center group"
+        className="flex gap-x-1 items-center group text-yellow-500 hover:text-yellow-600 transition-all duration-300"
         href="/"
       >
-        <Text className="text-ui-fg-interactive">Torna alla pagina iniziale</Text>
+        <Text>Torna alla pagina iniziale</Text>
         <ArrowUpRightMini
-          className="group-hover:rotate-45 ease-in-out duration-150"
-          color="var(--fg-interactive)"
+          className="group-hover:rotate-45 transition-transform duration-300"
         />
       </Link>
     </div>

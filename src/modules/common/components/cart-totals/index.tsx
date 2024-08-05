@@ -11,13 +11,8 @@ type CartTotalsProps = {
 }
 
 const CartTotals: React.FC<CartTotalsProps> = ({ data }) => {
-  const {
-    subtotal,
-    discount_total,
-    gift_card_total,
-    shipping_total,
-    total,
-  } = data
+  const { subtotal, discount_total, gift_card_total, shipping_total, total } =
+    data
 
   const getAmount = (amount: number | null | undefined) => {
     return formatAmount({
@@ -33,7 +28,10 @@ const CartTotals: React.FC<CartTotalsProps> = ({ data }) => {
         <div className="flex items-center justify-between">
           <span className="flex gap-x-1 items-center">
             Subtotale
-            <Tooltip className="font-sans" content="Totale dei prodotti, spedizione esclusa.">
+            <Tooltip
+              className="font-sans"
+              content="Totale dei prodotti, spedizione esclusa."
+            >
               <InformationCircleSolid className="hidden lg:block text-slate-400" />
             </Tooltip>
           </span>
@@ -42,7 +40,7 @@ const CartTotals: React.FC<CartTotalsProps> = ({ data }) => {
         {!!discount_total && (
           <div className="flex items-center justify-between">
             <span>Sconto</span>
-            <span className="text-ui-fg-interactive">
+            <span className="text-yellow-500">
               - {getAmount(discount_total)}
             </span>
           </div>
@@ -50,7 +48,7 @@ const CartTotals: React.FC<CartTotalsProps> = ({ data }) => {
         {!!gift_card_total && (
           <div className="flex items-center justify-between">
             <span>Gift card</span>
-            <span className="text-ui-fg-interactive">
+            <span className="text-yellow-500">
               - {getAmount(gift_card_total)}
             </span>
           </div>

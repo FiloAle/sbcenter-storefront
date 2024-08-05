@@ -1,9 +1,9 @@
 import React from "react"
 
-import UnderlineLink from "@modules/common/components/interactive-link"
-
 import AccountNav from "../components/account-nav"
 import { Customer } from "@medusajs/medusa"
+import { ArrowUpRightMini } from "@medusajs/icons"
+import { Text } from "@medusajs/ui"
 
 interface AccountLayoutProps {
   customer: Omit<Customer, "password_hash"> | null
@@ -25,14 +25,15 @@ const AccountLayout: React.FC<AccountLayoutProps> = ({
           <div>
             <h3 className="text-xl-semi mb-4">Domande?</h3>
             <span className="text-md">
-              Puoi trovare aiuto nelle FAQ presenti nella pagina del servizio clienti.
+              Chiedi aiuto al nostro servizio clienti.
             </span>
           </div>
-          <div>
-            <UnderlineLink href="/customer-service">
+          <a href="mailto:servizioclienti@sbcenter.it" className="flex gap-x-1 items-center group text-yellow-500 hover:text-yellow-600 transition-all duration-300">
+            <Text>
               Servizio clienti
-            </UnderlineLink>
-          </div>
+            </Text>
+            <ArrowUpRightMini className="group-hover:rotate-45 transition-transform duration-300"/>
+          </a>
         </div>
       </div>
     </div>

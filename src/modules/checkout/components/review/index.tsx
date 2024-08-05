@@ -40,10 +40,9 @@ const Review = ({
           <div className="flex items-start gap-x-1 w-full mb-6">
             <div className="w-full">
               <Text className="txt-medium-plus text-ui-fg-base mb-1">
-                Cliccando su "Ordina e paga" procederai
-                all'acquisto dei prodotti presenti nel carrello e
-                accetterai i termini e le condizioni di vendita di
-                SB Center.
+                Cliccando su &quot;Ordina e paga&quot; procederai
+                all&apos;acquisto dei prodotti presenti nel carrello e
+                accetterai i termini e le condizioni di vendita di SB Center.
               </Text>
             </div>
           </div>

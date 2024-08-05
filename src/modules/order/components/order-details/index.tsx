@@ -22,7 +22,7 @@ const OrderDetails = ({ order, showStatus }: OrderDetailsProps) => {
         </span>
         .
       </Text>
-      <Text className="mt-2 text-ui-fg-interactive">
+      <Text className="mt-2 text-yellow-500">
         Numero dell'ordine: {order.display_id}
       </Text>
 

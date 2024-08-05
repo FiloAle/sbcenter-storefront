@@ -1,6 +1,5 @@
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import ChevronDown from "@modules/common/icons/chevron-down"
-import MedusaCTA from "@modules/layout/components/credits"
 import Image from "next/image"
 import logo from "../../../../public/sbcenter.svg"
 
@@ -21,7 +20,7 @@ export default function CheckoutLayout({
             <span className="mt-px hidden small:block text-md">
               Torna al carrello
             </span>
-            <span className="mt-px block small:hidden text-md text-ui-fg-subtle hover:text-ui-fg-base">
+            <span className="mt-px block small:hidden text-md">
               Indietro
             </span>
           </LocalizedClientLink>
@@ -39,9 +38,6 @@ export default function CheckoutLayout({
         </nav>
       </div>
       <div className="relative">{children}</div>
-      <div className="py-4 w-full flex items-center justify-center">
-        <MedusaCTA />
-      </div>
     </div>
   )
 }

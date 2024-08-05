@@ -103,7 +103,7 @@ const Addresses = ({
             {cart && cart.shipping_address ? (
               <div className="flex items-start gap-x-8">
                 <div className="flex items-start gap-x-1 w-full">
-                  <div className="flex flex-col w-1/3">
+                  <div className="flex flex-col w-1/2">
                     <Text className="text-md text-ui-fg-base mb-1">
                       Indirizzo di consegna
                     </Text>
@@ -121,19 +121,7 @@ const Addresses = ({
                     </Text>
                   </div>
 
-                  <div className="flex flex-col w-1/3 ">
-                    <Text className="text-md text-ui-fg-base mb-1">
-                      Recapito
-                    </Text>
-                    <Text className="text-md text-ui-fg-subtle">
-                      {cart.shipping_address.phone}
-                    </Text>
-                    <Text className="text-md text-ui-fg-subtle">
-                      {cart.email}
-                    </Text>
-                  </div>
-
-                  <div className="flex flex-col w-1/3">
+                  <div className="flex flex-col w-1/2">
                     <Text className="text-md text-ui-fg-base mb-1">
                       Indirizzo di fatturazione
                     </Text>

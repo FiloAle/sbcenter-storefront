@@ -57,7 +57,7 @@ const MobileActions: React.FC<MobileActionsProps> = ({
   return (
     <>
       <div
-        className={clx("lg:hidden inset-x-0 bottom-0 fixed", {
+        className={clx("lg:hidden inset-x-0 bottom-0 fixed z-10", {
           "pointer-events-none": !show,
         })}
       >
@@ -77,33 +77,35 @@ const MobileActions: React.FC<MobileActionsProps> = ({
               <span>—</span>
               {selectedPrice ? (
                 <div className="flex items-end gap-x-2 text-ui-fg-base">
-                  {selectedPrice.price_type === "sale" && (
-                    <p>
-                      <span className="line-through text-small-regular">
-                        {selectedPrice.original_price}
-                      </span>
-                    </p>
-                  )}
                   <span
                     className={clx({
-                      "text-ui-fg-interactive":
+                      "text-md font-semibold text-yellow-500":
                         selectedPrice.price_type === "sale",
                     })}
                   >
                     {selectedPrice.calculated_price}
                   </span>
+                  {selectedPrice.price_type === "sale" && (
+                    <p>
+                      <span className="line-through text-xs font-normal text-slate-400">
+                        {selectedPrice.original_price}
+                      </span>
+                    </p>
+                  )}
                 </div>
               ) : (
                 <div></div>
               )}
             </div>
             <div className="grid grid-cols-2 w-full gap-x-4">
-              <Button onClick={open} variant="secondary" className="w-full rounded-full">
+              <Button
+                onClick={open}
+                variant="secondary"
+                className="w-full rounded-full"
+              >
                 <div className="flex items-center justify-between w-full">
                   <span>
-                    {variant
-                      ? Object.values(options).join(" / ")
-                      : "Opzioni"}
+                    {variant ? Object.values(options).join(" / ") : "Opzioni"}
                   </span>
                   <ChevronDown />
                 </div>

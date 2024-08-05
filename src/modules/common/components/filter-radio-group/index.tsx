@@ -46,7 +46,7 @@ const FilterRadioGroup = ({
               placeholder={i.label}
               htmlFor={i.value}
               className={clx(
-                "!text-sm !transform-none text-ui-fg-subtle hover:cursor-pointer",
+                "!text-sm !transform-none text-ui-fg-subtle hover:text-ui-fg-base hover:cursor-pointer transition-all duration-300",
                 {
                   "text-ui-fg-base": i.value === value,
                 }

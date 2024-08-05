@@ -2,8 +2,7 @@ import { Text } from "@medusajs/ui"
 
 import { ProductPreviewType } from "types/global"
 
-import { getProductsByCollectionHandle, retrievePricedProductById } from "@lib/data"
-import { PricedProduct } from "@medusajs/medusa/dist/types/pricing"
+import { retrievePricedProductById } from "@lib/data"
 
 import { getProductPrice } from "@lib/util/get-product-price"
 import { Region } from "@medusajs/medusa"
@@ -47,7 +46,9 @@ export default async function ProductPreview({
           className="!rounded-none !shadow-none border-b border-slate-600"
         />
         <div className="flex flex-col text-md mt-4 px-3 pb-4 sm:px-4 sm:pt-1 sm:pb-4 justify-between items-start">
-          <Text className="text-slate-600 line-clamp-2 sm:line-clamp-1">{productPreview.title}</Text>
+          <Text className="text-slate-600 line-clamp-2 sm:line-clamp-1">
+            {productPreview.title}
+          </Text>
           <div className="flex items-center gap-x-2">
             {cheapestPrice && <PreviewPrice price={cheapestPrice} />}
           </div>

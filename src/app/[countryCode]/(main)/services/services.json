@@ -1,0 +1,92 @@
+{
+    "sb":{
+        "personalcare":[
+            {"name":"Pulizia viso", "price":37},
+            {"name":"Manicure", "price":15},
+            {"name":"Pedicure", "price":"da 27 a 30"},
+            {"name":"Shellac", "price":21},
+            {"name":"Top lampada", "price":10},
+            {"name":"Paraffina", "price":15}
+        ],
+        "epilazione":[
+            {"name":"Completa, inguine e ascelle", "price":32},
+            {"name":"Parziale e inguine", "price":"da 22 a 25"},
+            {"name":"Braccia", "price":"da 8 a 15"},
+            {"name":"Ascelle o inguine", "price":"da 10 a 20"},
+            {"name":"Labiale", "price":5},
+            {"name":"Sopracciglia", "price":"da 5 a 8"}
+        ],
+        "massaggi":[
+            {"name":"Massaggio (30 min)", "price":28},
+            {"name":"Massaggio (60 min)", "price":50},
+            {"name":"Linfodrenaggio (60 min)", "price":60}
+        ]
+    },
+
+    "esth":[
+        {"name":"Epilazione progressiva", "price":"da 25"}
+    ],
+
+    "dibi":{
+        "manualiviso":[
+            {"name":"Pulizia viso", "price":37},
+            {"name":"Face Perfection", "price":55},
+            {"name":"Pure Equalizer", "price":"da 55 a 65"},
+            {"name":"Defence Solution", "price":65},
+            {"name":"Hydra Perfection", "price":"da 60 a 100"},
+            {"name":"Magnific Mask", "price":80},
+            {"name":"The Gold", "price":150},
+            {"name":"Pro-Cellular 365", "price":150},
+            {"name":"#Age Method", "price":95},
+            {"name":"Lift Creator", "price":95},
+            {"name":"Filler Code", "price":"da 70 a 95"},
+            {"name":"White Science", "price":100},
+            {"name":"Acid Infusion", "price":95},
+            {"name":"Jet M", "price":135}
+        ],
+        "manualicorpo":[
+            {"name":"Body Vitality", "price":65},
+            {"name":"Cell Rewind", "price":"da 70 a 85"},
+            {"name":"Shape Refine", "price":"da 70 a 85"},
+            {"name":"Tonic Lifter", "price":"da 55 a 85"}
+        ],
+        "dibiviso":[
+            {"name":"GoldenRegen", "price":80},
+            {"name":"DermoRegen", "price":65}
+        ],
+        "dibicorpo":[
+            {"name":"ShapeDefine", "price":95},
+            {"name":"FisioTron", "price":80},
+            {"name":"GoldenAPG", "price":80},
+            {"name":"DermoRegen", "price":65}
+        ]
+    },
+
+    "cz":{
+        "viso":[
+            {"name":"Sublime Skin (50 min)", "price":150},
+            {"name":"Sublime Skin 50+ (50 min)", "price":170},
+            {"name":"HydraMemory (50 min)", "price":110},
+            {"name":"Remedy (50 min)", "price":90}
+        ],
+        "corpo":[
+            {"name":"Salt Massage (60 min)", "price":90},
+            {"name":"Montalcino Mud (50 min)", "price":80},
+            {"name":"SPA Pedicure (60 min)", "price":50}
+        ],
+        "rituali":[
+            {"name":"Tibetan Sound Massage (50 min)", "price":100},
+            {"name":"Rituale del sonno (50 min)", "price":90},
+            {"name":"Tranquillity (50 min)", "price":90},
+            {"name":"Hot Stone (50 min)", "price":90},
+            {"name":"Aromasoul Mediterranean (50 min)", "price":90},
+            {"name":"New Life, New Mum (50 min)", "price":70}
+        ],
+        "spa":[
+            {"name":"Ingresso singolo (30 min)", "price":40},
+            {"name":"Ingresso singolo (3 ore)", "price":60},
+            {"name":"Abbonamento 10 ingressi (30 min)", "price":340},
+            {"name":"Abbonamento 10 ingressi (3 ore)", "price":500}
+        ]
+    }
+}

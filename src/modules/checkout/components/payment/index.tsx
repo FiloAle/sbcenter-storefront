@@ -221,7 +221,7 @@ const Payment = ({
                   <Text>
                     {cart.payment_session.provider_id === "stripe" && cardBrand
                       ? cardBrand
-                      : "Another step will appear"}
+                      : "Ti verrà richiesto un altro step"}
                   </Text>
                 </div>
               </div>

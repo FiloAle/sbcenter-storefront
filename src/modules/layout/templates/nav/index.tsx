@@ -34,24 +34,18 @@ export default async function Nav() {
             <div className="hidden small:flex items-center gap-x-6 h-full">
               {process.env.FEATURE_SEARCH_ENABLED && (
                 <LocalizedClientLink
-                  className="text-slate-600 transition-all hover:text-yellow-500"
+                  className="text-slate-600 transition-all duration-300 hover:text-yellow-500"
                   href="/search"
                   scroll={false}
                 >
                   Cerca
                 </LocalizedClientLink>
               )}
-              <LocalizedClientLink
-                className="text-slate-600 transition-all hover:text-yellow-500"
-                href="/account"
-              >
-                <User/>
-              </LocalizedClientLink>
             </div>
             <Suspense
               fallback={
                 <LocalizedClientLink
-                  className="text-slate-600 transition-all hover:text-yellow-500 flex gap-2"
+                  className="text-slate-600 transition-all duration-300 hover:text-yellow-500 flex gap-2"
                   href="/cart"
                 >
                   <ShoppingBag/> <div className="mt-px ms-px pt-0.5 h-5 w-5 bg-slate-600 rounded-full text-white font-semibold text-center items-center justify-center">0</div>

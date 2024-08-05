@@ -109,8 +109,7 @@ const Item = ({ item, region, type = "full" }: ItemProps) => {
         >
           {type === "preview" && (
             <span className="flex gap-x-1 ">
-              <Text className="text-ui-fg-muted">{item.quantity} x </Text>
-              <LineItemUnitPrice item={item} region={region} style="tight" />
+              <Text className="text-ui-fg-muted">Quantità: {item.quantity}</Text>
             </span>
           )}
           <LineItemPrice item={item} region={region} style="tight" />

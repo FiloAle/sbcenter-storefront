@@ -60,15 +60,14 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
       <div className="text-md">
         {gift_cards.length > 0 && (
           <div className="flex flex-col mb-4">
-            <Heading className="text-md">Gift card applicata:</Heading>
             {gift_cards?.map((gc) => (
               <div
                 className="flex items-center justify-between text-sm"
                 key={gc.id}
               >
                 <Text className="flex gap-x-1 items-baseline">
-                  <span>Codice: </span>
-                  <span className="truncate">{gc.code}</span>
+                  <span>Gift card </span>
+                  <span className="truncate text-slate-400">{gc.code}</span>
                 </Text>
                 <Text className="font-semibold">
                   {formatAmount({
@@ -92,11 +91,12 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
         {appliedDiscount ? (
           <div className="w-full flex items-center">
             <div className="flex flex-col w-full">
-              <Heading className="text-md">Sconto applicato:</Heading>
               <div className="flex items-center justify-between w-full max-w-full">
                 <Text className="flex gap-x-1 items-baseline text-sm w-4/5 pr-1">
-                  <span>Code:</span>
-                  <span className="truncate">{discounts[0].code}</span>
+                  <span>Sconto </span>
+                  <span className="truncate text-slate-400">
+                    {discounts[0].code}
+                  </span>
                   <span className="min-w-fit">({appliedDiscount})</span>
                 </Text>
                 <button
@@ -104,16 +104,14 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
                   onClick={removeDiscountCode}
                 >
                   <Trash size={14} />
-                  <span className="sr-only">
-                    Rimuovi il codice sconto
-                  </span>
+                  <span className="sr-only">Rimuovi il codice sconto</span>
                 </button>
               </div>
             </div>
           </div>
         ) : (
           <form action={formAction} className="w-full">
-            <Label className="flex gap-x-1 my-2 items-center justify-between">
+            <Text className="flex gap-x-1 my-2 items-center justify-between">
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 type="button"
@@ -121,10 +119,13 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
               >
                 Aggiungi gift card o codice sconto
               </button>
-              <Tooltip className="font-sans" content="Puoi aggiungere più gift card o un solo codice sconto.">
+              <Tooltip
+                className="font-sans"
+                content="Puoi aggiungere più gift card o un solo codice sconto."
+              >
                 <InformationCircleSolid className="hidden lg:block transition-all text-yellow-500 hover:text-yellow-600" />
               </Tooltip>
-            </Label>
+            </Text>
             {isOpen && (
               <>
                 <div className="flex w-full gap-x-2 items-center">
@@ -134,7 +135,9 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
                     type="text"
                     autoFocus={false}
                   />
-                  <SubmitButton variant="secondary" className="px-5">Applica</SubmitButton>
+                  <SubmitButton variant="secondary" className="px-5">
+                    Applica
+                  </SubmitButton>
                 </div>
                 <ErrorMessage error={message} />
               </>

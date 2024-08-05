@@ -126,8 +126,9 @@ const StripePaymentButton = ({
         onClick={handlePayment}
         size="large"
         isLoading={submitting}
+        className="rounded-full bg-black text-white shadow-md hover:bg-slate-900 hover:shadow-lg dark:bg-white dark:text-black dark:hover:bg-slate-50"
       >
-        Place order
+        Ordina e paga
       </Button>
       <ErrorMessage error={errorMessage} />
     </>

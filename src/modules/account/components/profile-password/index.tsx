@@ -34,9 +34,7 @@ const ProfileName: React.FC<MyInformationProps> = ({ customer }) => {
     <form action={formAction} onReset={() => clearState()} className="w-full text-semibold">
       <AccountInfo
         label="Password"
-        currentInfo={
-          <span>La password è nascosta per ragioni di sicurezza</span>
-        }
+        currentInfo={`********`}
         isSuccess={successState}
         isError={!!state.error}
         errorMessage={state.error}
@@ -44,19 +42,19 @@ const ProfileName: React.FC<MyInformationProps> = ({ customer }) => {
       >
         <div className="grid grid-cols-2 gap-4">
           <Input
-            label="Vecchia password"
+            label="Vecchia psw"
             name="old_password"
             required
             type="password"
           />
           <Input
-            label="Nuova password"
+            label="Nuova psw"
             type="password"
             name="new_password"
             required
           />
           <Input
-            label="Conferma password"
+            label="Conferma psw"
             type="password"
             name="confirm_password"
             required
