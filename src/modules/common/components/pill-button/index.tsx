@@ -31,20 +31,20 @@ const buttonVariants = cva(
   }
 );
 
-interface ButtonProps
-    extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof buttonVariants> {}
+export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>, VariantProps<typeof buttonVariants> {}
 
-    const PillButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
-    ({ className, variant, size, ...props }, ref) => {
-        return (
-        <button
-            className={clx(buttonVariants({ variant, size, className }))}
-            ref={ref}
-            {...props}
-        />
-        );
-    }
+const PillButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ className, variant, size, ...props }, ref) => {
+    return (
+    <button
+        className={clx(buttonVariants({ variant, size, className }))}
+        ref={ref}
+        {...props}
+    />
+    );
+  }
 );
+
+PillButton.displayName = "PillButton"
 
 export { PillButton, buttonVariants };
