@@ -24,7 +24,7 @@ const OrderOverview = ({ orders }: { orders: Order[] }) => {
 
   return (
     <div className="w-full flex flex-col items-center gap-y-4">
-      <h2 className="text-large-semi">Non c'è nulla da vedere qui</h2>
+      <h2 className="text-large-semi">Non c&apos;è nulla da vedere qui</h2>
       <p className="text-base-regular">
         Non hai ancora completato nessun ordine, ma puoi sempre farne uno ora {":)"}
       </p>

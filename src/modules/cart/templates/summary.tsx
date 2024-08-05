@@ -23,7 +23,7 @@ const Summary = ({ cart }: SummaryProps) => {
       <CartTotals data={cart} />
       <DiscountCode cart={cart} />
       <LocalizedClientLink href={"/checkout?step=" + cart.checkout_step}>
-        <PillButton size="lg" variant="secondary_dark">Procedi all'acquisto</PillButton>
+        <PillButton size="lg" variant="secondary_dark">Procedi all&apos;acquisto</PillButton>
       </LocalizedClientLink>
     </div>
   )

@@ -29,7 +29,7 @@ export default function OrderCompletedTemplate({
             className="flex flex-col gap-y-3 text-ui-fg-base mb-4"
           >
             <span className="text-3xl">Grazie!</span>
-            <span className="text-xl font-normal">L'ordine è stato eseguito correttamente.</span>
+            <span className="text-xl font-normal">L&apos;ordine è stato eseguito correttamente.</span>
           </Heading>
           <OrderDetails order={order} />
           <Heading level="h2" className="flex flex-row text-3xl">

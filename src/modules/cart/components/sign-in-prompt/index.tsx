@@ -10,7 +10,7 @@ const SignInPrompt = () => {
           Hai già un account?
         </Heading>
         <Text className="text-md text-ui-fg-subtle mt-2">
-          Accedi per un'esperienza migliore.
+          Accedi per un&apos;esperienza migliore.
         </Text>
       </div>
       <div>

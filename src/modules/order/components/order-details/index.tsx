@@ -23,14 +23,14 @@ const OrderDetails = ({ order, showStatus }: OrderDetailsProps) => {
         .
       </Text>
       <Text className="mt-2 text-yellow-500">
-        Numero dell'ordine: {order.display_id}
+        Numero dell&apos;ordine: {order.display_id}
       </Text>
 
       <div className="flex items-center text-compact-small gap-x-4 mt-4">
         {showStatus && (
           <>
             <Text>
-              Stato dell'ordine:{" "}
+              Stato dell&apos;ordine:{" "}
               <span className="text-ui-fg-subtle ">
                 {formatStatus(order.fulfillment_status)}
               </span>

@@ -113,7 +113,7 @@ const ShippingInfoTab = () => {
             <span className="font-semibold">Ritiro in negozio</span>
             <p className="max-w-sm">
               Vuoi ritirare gratuitamente i tuoi acquisti in negozio? 
-              Nessun problema! Seleziona l'opzione in fase di pagamento.
+              Nessun problema! Seleziona l&apos;opzione in fase di pagamento.
             </p>
           </div>
         </div>
