@@ -1,5 +1,6 @@
 import { Metadata } from "next"
 import "styles/globals.css"
+import CookieModal from "@modules/common/components/cookie-modal"
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://localhost:8000"
 
@@ -17,6 +18,7 @@ export default function RootLayout(props: { children: React.ReactNode }) {
       </head>
       <body>
         <main className="relative">{props.children}</main>
+        <CookieModal/>
       </body>
     </html>
   )

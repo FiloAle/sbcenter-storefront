@@ -16,14 +16,14 @@ const OrderDetails = ({ order, showStatus }: OrderDetailsProps) => {
   return (
     <div>
       <Text>
-        Abbiamo inviato una mail di conferma a{" "}
+        Presto invieremo una mail di conferma a{" "}
         <span className="text-ui-fg-medium-plus font-semibold">
           {order.email}
         </span>
         .
       </Text>
       <Text className="mt-2 text-yellow-500">
-        Numero dell&apos;ordine: {order.display_id}
+        ID ordine: {order.display_id}
       </Text>
 
       <div className="flex items-center text-compact-small gap-x-4 mt-4">
