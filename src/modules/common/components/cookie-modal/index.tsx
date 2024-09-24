@@ -35,7 +35,7 @@ export default function CookieModal() {
                                 Questo sito utilizza soltanto alcuni cookie tecnici per funzionare correttamente.
                             </p>
                             <button
-                                className="w-full p-2 mb-1 gap-x-1 bg-yellow-500 hover:bg-yellow-600 cursor-pointer text-center text-white font-medium rounded-md transition-all duration-300"
+                                className="w-full p-2 mb-0.5 gap-x-1 bg-yellow-500 hover:bg-yellow-600 cursor-pointer text-center text-white font-medium rounded-md transition-all duration-300"
                                 onClick={toggle}
                             >
                                 Va bene, accetto
